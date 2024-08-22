@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 5.6 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-5-6">
+<h1>Version 5.6<a class="headerlink" href="#version-5-6" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-08-12</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 5.5.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4904">Issue #4904</a> -  Added support to copy SQL from main window to query tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5198">Issue #5198</a> -  Added support for formatted JSON viewer/editor when interacting with data in a JSON column.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6622">Issue #6622</a> -  Rename the “Resize by data?” to “Columns sized by” and disabled the ‘Maximum column width’ button if ‘Columns sized by’ is set to ‘Column data’.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6337">Issue #6337</a> -  Ensure that the login account should be locked after N number of attempts. N is configurable using the ‘MAX_LOGIN_ATTEMPTS’ parameter.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6369">Issue #6369</a> -  Fixed CSRF errors for stale sessions by increasing the session expiration time for desktop mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6448">Issue #6448</a> -  Fixed an issue in the search object when searching in ‘all types’ or ‘subscription’ if the user doesn’t have access to the subscription.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6574">Issue #6574</a> -  Fixed an issue where paste is not working through Right-Click option on PSQL.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6580">Issue #6580</a> -  Fixed TypeError ‘NoneType’ object is not sub scriptable.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6586">Issue #6586</a> -  Fixed incorrect tablespace options in the drop-down for move objects dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6618">Issue #6618</a> -  Fixed an issue where the titles in query tabs are different.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6619">Issue #6619</a> -  Fixed incorrect binary path issue when the user deletes the binary path from the preferences.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6643">Issue #6643</a> -  Ensure that all the required options should be loaded when the Range data type is selected while creating a custom data type.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6650">Issue #6650</a> -  Fixed dashboard server activity issue when active_since parameter is None.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6664">Issue #6664</a> -  Fixed an issue where even if the user is locked, he can reset the password and can login into pgAdmin.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_5_6.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

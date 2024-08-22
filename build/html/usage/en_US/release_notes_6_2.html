@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 6.2 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-6-2">
+<h1>Version 6.2<a class="headerlink" href="#version-6-2" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-11-18</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 6.1.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3834">Issue #3834</a> -  Added support of Aggregate and Operator node in view-only mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6953">Issue #6953</a> -  Ensure that users should be able to modify the REMOTE_USER environment variable as per their environment by introducing the new config parameter WEBSERVER_REMOTE_USER.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5427">Issue #5427</a> -  Fixed pgAdmin freezing issue by providing the error message for the operation that can’t perform due to lock on the particular table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6780">Issue #6780</a> -  Ensure that columns should be merged if the newly added column is present in the parent table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6809">Issue #6809</a> -  Fixed an issue where pgAdmin is not opening properly.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6832">Issue #6832</a> -  Ensure that internal authentication when combined with other authentication providers, the order of internal source should not matter while picking up the provider.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6845">Issue #6845</a> -  Ensure that inherit table icon should be visible properly in the tree view.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6859">Issue #6859</a> -  Fixed an issue where properties panel is not updated when any object is added from the browser tree.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6896">Issue #6896</a> -  Ensure that the user should be able to navigate browser tree objects using arrow keys from keyboard.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6905">Issue #6905</a> -  Fixed an issue where database nodes are not getting loaded behind a reverse proxy with SSL.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6925">Issue #6925</a> -  Fixed SQL syntax error if select “Custom auto-vacuum” option and not set Autovacuum option to Yes or No.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6939">Issue #6939</a> -  Fixed an issue where older server group name displayed in the confirmation pop-up when the user removes server group.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6944">Issue #6944</a> -  Fixed an issue where JSON editor preview colours have inappropriate contrast in dark mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6945">Issue #6945</a> -  Fixed JSON Editor scrolling issue in code mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6940">Issue #6940</a> -  Fixed an issue where user details are not shown when the non-admin user tries to connect to the shared server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6949">Issue #6949</a> -  Ensure that dialog should be opened when clicking on Reassign/Drop owned menu.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6954">Issue #6954</a> -  Ensure that changing themes should work on Windows when system high contrast mode is enabled.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6972">Issue #6972</a> -  Ensure that the Binary path for PG14 should be visible in the preferences.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6974">Issue #6974</a> -  Added operators and aggregates in search objects.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6976">Issue #6976</a> -  Fixed an issue where textarea should be allowed to resize and have more than 255 chars.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6981">Issue #6981</a> -  Fixed an issue where SQL for index shows the same column multiple times.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6988">Issue #6988</a> -  Reset the layout if pgAdmin4 detects the layout is in an inconsistent state.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_6_2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Backup Globals Dialog &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="backup-globals-dialog">
+<span id="id1"></span><h1><span class="target" id="index-0"></span>Backup Globals Dialog<a class="headerlink" href="#backup-globals-dialog" title="Link to this heading">¶</a></h1>
+<p>Use the <em>Backup Globals</em> dialog to create a plain-text script that recreates all
+of the database objects within a cluster, and the global objects that are shared
+by those databases. Global objects include tablespaces, roles, and object
+properties. You can use the pgAdmin <em>Query Tool</em> to play back a plain-text
+script, and recreate the objects in the backup.</p>
+<img alt="Backup globals dialog" class="align-center" src="../../_images/backup_globals_general.png" />
+<p>Use the fields in the <em>General</em> tab to specify the following:</p>
+<ul class="simple">
+<li><p>Enter the name of the backup file in the <em>Filename</em> field.  Optionally, select
+the <em>Browser</em> icon (ellipsis) to the right to navigate into a directory and
+select a file that will contain the archive.</p></li>
+<li><p>Use the drop-down listbox next to <em>Role name</em> to specify a role with
+connection privileges on the selected server.  The role will be used for
+authentication during the backup.</p></li>
+</ul>
+<p>Move switches in the <strong>Miscellaneous</strong> field box to specify the type of
+statements that should be included in the backup.</p>
+<ul class="simple">
+<li><p>Move the <em>Verbose messages</em> switch to the <em>No</em> position to exclude status
+messages from the backup. The default is <em>Yes</em>.</p></li>
+<li><p>Move the <em>Force double quote on identifiers</em> switch to the <em>Yes</em> position to
+name identifiers without changing case. The default is <em>No</em>.</p></li>
+</ul>
+<p>Click the <em>Backup</em> button to build and execute a command based on your
+selections; click the <em>Cancel</em> button to exit without saving work.</p>
+<p>pgAdmin will run the backup process in background. You can view all the background
+process with there running status and logs on the <a class="reference internal" href="processes.html#processes"><span class="std std-ref">Processes</span></a>
+tab</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/backup_globals_dialog.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

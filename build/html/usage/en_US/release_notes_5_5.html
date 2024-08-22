@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 5.5 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-5-5">
+<h1>Version 5.5<a class="headerlink" href="#version-5-5" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-07-15</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 5.4.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1975">Issue #1975</a> -  Highlighted long running queries on the dashboards.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3893">Issue #3893</a> -  Added support for Reassign/Drop Owned for login roles.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3920">Issue #3920</a> -  Do not block the query editor window when running a query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5940">Issue #5940</a> -  Added support for OAuth 2 authentication.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6559">Issue #6559</a> -  Added option to provide maximum width of the column when ‘Resize by data?’ option in the preferences is set to True.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4189">Issue #4189</a> -  Ensure that the Data Output panel can be snapped back after it is detached.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6388">Issue #6388</a> -  Fixed replace keyboard shortcut issue in the query tool on the normal keyboard layout.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6398">Issue #6398</a> -  Fixed an issue where detaching the query editor panel gives a blank white panel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6427">Issue #6427</a> -  Remove leading whitespace and replace it with ‘[…] ‘ in the Query Tool data grid so cells don’t look empty.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6448">Issue #6448</a> -  Fixed an issue in the search object when searching in ‘all types’ or ‘subscription’ if the user doesn’t have access to the subscription.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6489">Issue #6489</a> -  Fixed an issue where Execute/Refresh button should not be disabled when we run the empty query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6505">Issue #6505</a> -  Fixed an issue where the New Connection Drop Down has lost default maintenance database, auto-select, and tab-through functionality.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6536">Issue #6536</a> -  Fixed directory selection issue with the folder dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6541">Issue #6541</a> -  Ensure that setting ‘Open in new browser tab’ should be visible, it should not be based on the value of ‘ENABLE_PSQL’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6547">Issue #6547</a> -  Fixed copy/paste issues for PSQL tool terminal.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6550">Issue #6550</a> -  Disable email deliverability check that was introduced in flask-security-too by default to maintain backwards compatibility.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6555">Issue #6555</a> -  Fixed Czech translation string for ‘Login’ keyword.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6557">Issue #6557</a> -  Fixed an issue where incorrect column name listed in the properties of Index.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_5_5.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

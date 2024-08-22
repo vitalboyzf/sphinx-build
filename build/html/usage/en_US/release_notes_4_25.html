@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.25 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-25">
+<h1>Version 4.25<a class="headerlink" href="#version-4-25" title="Link to this heading">¶</a></h1>
+<p>Release date: 2020-08-20</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.24.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3904">Issue #3904</a> -  Replace charting library Flotr2 with ChartJS using React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5126">Issue #5126</a> -  Modified schema diff tool to compare two databases instead of two schemas.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5610">Issue #5610</a> -  Add a –yes command line option to setup-web.sh to allow non-interactive use.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5324">Issue #5324</a> -  Improve code coverage and API test cases for Foreign Servers and User Mappings.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5327">Issue #5327</a> -  Improve code coverage and API test cases for Schemas.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5336">Issue #5336</a> -  Improve code coverage and API test cases for Types.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5700">Issue #5700</a> -  Remove old Python 2 compatibility code.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5731">Issue #5731</a> -  Upgrade font awesome from v4 to v5.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3767">Issue #3767</a> -  Ensure that the original file format should be retained when saving the same file in SQL editor.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3791">Issue #3791</a> -  Added missing comments in reverse engineering SQL for each column of a View.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4123">Issue #4123</a> -  Fixed an issue where debugger doesn’t work if the search path is set other than ‘public’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4361">Issue #4361</a> -  Fixed ssh tunnel hang issue when the user tries to disconnect the server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4387">Issue #4387</a> -  Fixed an issue where the user is not able to insert the data if the table and columns name contains special characters.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4810">Issue #4810</a> -  Fixed an issue where the user is not able to save the new row if the table is empty.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5429">Issue #5429</a> -  Ensure that the Dictionaries drop-down shows all the dictionaries in the FTS configuration dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5490">Issue #5490</a> -  Make the runtime configuration dialog non-modal.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5526">Issue #5526</a> -  Fixed an issue where copying and pasting a cell with multiple line data will result in multiple rows.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5567">Issue #5567</a> -  Fixed an issue where conversion of bytea to the binary string results in an error.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5604">Issue #5604</a> -  Fixed an issue where the entire logs is in red text when the user runs backup and restore.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5632">Issue #5632</a> -  Ensure that the user will be able to modify the start value of the Identity column.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5646">Issue #5646</a> -  Ensure that RLS Policy node should be searchable using search object.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5664">Issue #5664</a> -  Fixed an issue where ‘ALTER VIEW’ statement is missing when the user sets the default value of a column for View.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5670">Issue #5670</a> -  Fixed an issue where the error message does not have a close button on utility dialogs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5689">Issue #5689</a> -  Added the ‘ORDER BY’ clause for the privileges type to fix schema diff issue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5708">Issue #5708</a> -  Correct TLS certificate filename in the container deployment docs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5710">Issue #5710</a> -  Fixed an issue when comparing the table with a trigger throwing error in schema diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5713">Issue #5713</a> -  Corrected DROP SQL syntax for catalog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5716">Issue #5716</a> -  Fixed an issue where ajax call continues to fire even after disconnecting the database server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5724">Issue #5724</a> -  Clarify some of the differences when running in server mode in the docs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5730">Issue #5730</a> -  Resolve schema diff dependencies by selecting the appropriate node automatically and maintain the order in the generated script.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_25.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

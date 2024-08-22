@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 6.9 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-6-9">
+<h1>Version 6.9<a class="headerlink" href="#version-6-9" title="Link to this heading">¶</a></h1>
+<p>Release date: 2022-05-12</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 6.8.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3253">Issue #3253</a> -  Added status bar to the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3989">Issue #3989</a> -  Ensure that row numbers should be visible in view when scrolling horizontally.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6830">Issue #6830</a> -  Relocate GIS Viewer Button to the Left Side of the Results Table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7179">Issue #7179</a> -  Added capability to deploy PostgreSQL servers on EDB BigAnimal.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7282">Issue #7282</a> -  Added options ‘Ignore owner’ and ‘Ignore whitespace’ to the schema diff panel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7325">Issue #7325</a> -  Added support for Azure AD OAUTH2 authentication.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6131">Issue #6131</a> -  Port query tool to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6746">Issue #6746</a> -  Improve the Kerberos Documentation.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7255">Issue #7255</a> -  Ensure the database and schema restriction controls are not shown as a drop-down.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7340">Issue #7340</a> -  Port data filter dialog to React.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6725">Issue #6725</a> -  Fixed an issue where the Query tool opens on minimum size if the user opens multiple query tool Window quickly.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6958">Issue #6958</a> -  Only set permissions on the storage directory upon creation.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7026">Issue #7026</a> -  Fixed an issue where the Browser panel is not completely viewable.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7168">Issue #7168</a> -  Improvement to the Geometry Viewer popup to change the size of the result tables when column names are quite long.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7187">Issue #7187</a> -  Fixed an issue where the downloaded ERD diagram was 0 bytes.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7188">Issue #7188</a> -  Fixed an issue where the connection bar is not visible.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7231">Issue #7231</a> -  Don’t strip binaries when packaging them in the server RPM as this might break cpython modules.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7252">Issue #7252</a> -  Ensure that Columns should always be visible in the import/export dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7260">Issue #7260</a> -  Fixed an issue where an Empty message popup after running a query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7262">Issue #7262</a> -  Ensure that Autocomplete should work after changing the connection.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7294">Issue #7294</a> -  Fixed an issue where the copy and paste row does not work if the first column contains no data.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7296">Issue #7296</a> -  Ensure that after deleting multiple objects from the properties panel, the browser tree should be refreshed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7299">Issue #7299</a> -  Fixed sorting issue in the statistics panel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7305">Issue #7305</a> -  Fixed an issue where the Dashboard Server Activity was showing old queries as active.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7307">Issue #7307</a> -  Fixed an issue where the table showed duplicate columns when creating multiple sequences on the same column.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7308">Issue #7308</a> -  Ensure that sorting should be preserved on refresh for Server Activity.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7322">Issue #7322</a> -  Fixed an issue while creating a new database throwing an error that failed to retrieve data.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7333">Issue #7333</a> -  Fixed an issue where the drag and drop table in ERD throws an error.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7339">Issue #7339</a> -  Ensure that the Dashboard column sort order should be remembered when the refresh button is clicked.</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_6_9.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

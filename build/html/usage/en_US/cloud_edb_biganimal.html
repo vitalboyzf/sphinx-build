@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>EDB BigAnimal Cloud Deployment &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="edb-biganimal-cloud-deployment">
+<span id="cloud-edb-biganimal"></span><h1><span class="target" id="index-0"></span>EDB BigAnimal Cloud Deployment<a class="headerlink" href="#edb-biganimal-cloud-deployment" title="Link to this heading">¶</a></h1>
+<p>To deploy a PostgreSQL server on the EDB BigAnimal cloud, follow the below steps.</p>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_provider.png" />
+<p>Once you launch the tool, select the EDB BigAnimal option.
+Click on the <em>Next</em> button to proceed further.</p>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_credentials.png" />
+<p>The next steps is to authenticate the user to EDB BigAninal.
+Click the given button to authenticate, by clicking the button, the user
+will be redirected to the new tab for the verification.
+Once you confirm the one time code, the pgAdmin will automatically detect it
+and the next button will be enabled. To proceed further, click on the next button.</p>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_cluster.png" />
+<ul class="simple">
+<li><p>Use the <em>Cluster type</em> field to choose a cluster type.</p></li>
+<li><p>Use the <em>No. of Standby Replicas</em> field to specify the replicas if you have selected the High Availability cluster.</p></li>
+<li><p>Use the <em>Cluster provider</em> field to coose the provider.</p></li>
+</ul>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_instance.png" />
+<p>Use the fields from the Instance Specification tab to specify the Instance
+details.</p>
+<ul class="simple">
+<li><p>Use the <em>Cluster name</em> field to add a cluster name for the PostgreSQL
+server; the name specified will be displayed in the <em>Browser</em> tree control
+too.</p></li>
+<li><p>Use the <em>Region</em> field to select the region.</p></li>
+<li><p>Use the <em>Public IP range</em> field to specify the IP Address range for permitting the
+inbound traffic. Leave it blank for 0.0.0.0/0</p></li>
+<li><p>Use the <em>Instance type</em> field to select the instance type.</p></li>
+<li><p>Use the <em>Instance series</em> field to select the instance series.</p></li>
+<li><p>Use the <em>Instance size</em> field to allocate the computational, network, and
+memory capacity required by planned workload of this DB instance.</p></li>
+<li><p>Use the <em>Volume type</em> field to select the instance storage type.</p></li>
+<li><p>Use the <em>Volume properties</em> field to specify the storage capacity. This field is specific to Azure.</p></li>
+<li><p>Use the <em>Volume size</em> field to specify the storage size. This field is specific to AWS.</p></li>
+<li><p>Use the <em>Volume IOPS</em> field to specify the storage IOPS. This field is specific to AWS.</p></li>
+</ul>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_database.png" />
+<p>Use the fields from the Database Details tab to specify the Instance details.</p>
+<ul class="simple">
+<li><p>Use the drop-down list box in the <em>Server group</em> field to select the parent
+node for the server; the server will be displayed in the <em>Browser</em> tree
+control within the specified group.</p></li>
+<li><p>Use the <em>Database type</em> field to specify the PostgreSQL
+type, EnterpriseDB PostgreSQL Advanced Server or PostgreSQL.</p></li>
+<li><p>Use the <em>PostgreSQL version</em> field to select the database version.</p></li>
+<li><p>Use the <em>Database Password</em> field to provide a password that will be supplied when
+authenticating with the server.</p></li>
+<li><p>Use the <em>Confirm password</em> field to repeat the password.</p></li>
+</ul>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_biganimal_review.png" />
+<p>At the end, review the Cluster details that you provided. Click on Finish
+button to deploy the instance on EDB BigAnimal.</p>
+<img alt="Cloud Deployment Provider" class="align-center" src="../../_images/cloud_deployment_tree.png" />
+<p>Once you click on the finish, one background process will start which will
+deploy the instance in the cloud and monitor the progress of the deployment.
+You can view all the background process with there running status and logs
+on the <a class="reference internal" href="processes.html#processes"><span class="std std-ref">Processes</span></a> tab</p>
+<p>The Server will be added to the tree with the cloud deployment icon. Once the
+deployment is done, the server details will be updated.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/cloud_edb_biganimal.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 5.7 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-5-7">
+<h1>Version 5.7<a class="headerlink" href="#version-5-7" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-09-09</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 5.6.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2538">Issue #2538</a> -  Added support for the truncate table with restart identity.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4264">Issue #4264</a> -  Make code folding case insensitive in the code mirror.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4629">Issue #4629</a> -  Added database and server information on the Maintenance process watcher dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6495">Issue #6495</a> -  Allow the referenced table to be the same as the local table in one to many relationship for ERD Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6625">Issue #6625</a> -  Make closing tabs to be smarter by focusing on the appropriate tab when the user closed a tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6691">Issue #6691</a> -  Set PSQLRC and PSQL_HISTORY env vars to apt. user storage path in the server mode.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4567">Issue #4567</a> -  Fixed an issue where privileges were revoked using SQL query on objects like tables that do not correctly show in SQL tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4815">Issue #4815</a> -  Fixed an issue where the user can not paste the updated table header in safari 12 and 13 browsers.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5849">Issue #5849</a> -  Ensure that trigger function SQL should have ‘create or replace function’ instead of ‘create function’ only.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6419">Issue #6419</a> -  Fixed blank screen issue on windows and also made changes to use NWjs manifest for remembering window size.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6531">Issue #6531</a> -  Fixed the export image issue where relation lines are over the nodes.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6544">Issue #6544</a> -  Fixed width limitation issue in PSQL tool window.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6564">Issue #6564</a> -  Fixed an issue where columns with sequences get altered unnecessarily with a schema diff tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6570">Issue #6570</a> -  Ensure that the lock panel should not be blocked for larger records.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6572">Issue #6572</a> -  Partially fixes the data output panel display issue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6620">Issue #6620</a> -  Fixed an issue where whitespace in function bodies was not applied while generating the script using Schema Diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6627">Issue #6627</a> -  Introduced OAUTH2_SCOPE variable for the Oauth2 scope configuration.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6641">Issue #6641</a> -  Enables pgAdmin to retrieve user permissions in case of nested roles which helps to terminate the session for AWS RDS.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6663">Issue #6663</a> -  Fixed no attribute ‘_asdict’ error when connecting the database server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6668">Issue #6668</a> -  Fixed errors related to HTML tags shown in the error message for JSON editor.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6671">Issue #6671</a> -  Fixed UnboundLocalError where local variable ‘user_id’ referenced before assignment.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6682">Issue #6682</a> -  Renamed ‘Auto rollback?’ to ‘Auto rollback on error?’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6684">Issue #6684</a> -  Fixed the JSON editor issue of hiding the first record.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6685">Issue #6685</a> -  Ensure that deleting a database should not automatically connect to the next database.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6704">Issue #6704</a> -  Ensure that pgAdmin should not fail at login due to a special character in the hostname.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6710">Issue #6710</a> -  Fixed an issue where multiple query tool tabs getting closed for the single close event.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_5_7.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

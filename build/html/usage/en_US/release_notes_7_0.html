@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 7.0 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-7-0">
+<h1>Version 7.0<a class="headerlink" href="#version-7-0" title="Link to this heading">¶</a></h1>
+<p>Release date: 2023-04-06</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin 4 v6.21.</p>
+<section id="supported-database-servers">
+<h2>Supported Database Servers<a class="headerlink" href="#supported-database-servers" title="Link to this heading">¶</a></h2>
+<p><strong>PostgreSQL</strong>: 10, 11, 12, 13, 14 and 15</p>
+<p><strong>EDB Advanced Server</strong>: 10, 11, 12, 13, 14 and 15</p>
+</section>
+<section id="bundled-postgresql-utilities">
+<h2>Bundled PostgreSQL Utilities<a class="headerlink" href="#bundled-postgresql-utilities" title="Link to this heading">¶</a></h2>
+<p><strong>psql</strong>, <strong>pg_dump</strong>, <strong>pg_dumpall</strong>, <strong>pg_restore</strong>: 15.1</p>
+</section>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5014">Issue #5014</a> -  Added support for mounting shared storage in server mode.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5011">Issue #5011</a> -  Added support for psycopg3 along with psycopg2.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5701">Issue #5701</a> -  Remove Bootstrap and jQuery usage.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/4784">Issue #4784</a> -  Handle errors occurring during decoding UTF-8 encoded query result data which contains ascii characters.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5775">Issue #5775</a> -  Display the ‘No menu available for this object’ message if the selected tree node does not have any options.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5833">Issue #5833</a> -  Fixed an issue where user MFA entry was not getting delete after deleting a user.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5874">Issue #5874</a> -  Make “using” and “with check” fields a textarea in the RLS policy.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5904">Issue #5904</a> -  Fixed an issue where the count query should not be triggered when the estimated count is less than zero.</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_7_0.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

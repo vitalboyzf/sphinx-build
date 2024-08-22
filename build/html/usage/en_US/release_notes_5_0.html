@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 5.0 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-5-0">
+<h1>Version 5.0<a class="headerlink" href="#version-5-0" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-02-25</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.30.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5091">Issue #5091</a> -  Make Statistics, Dependencies, Dependants tabs closable and the user can add them back using the ‘Add panel’ option.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5912">Issue #5912</a> -  Added support for Logical Replication.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5967">Issue #5967</a> -  Implemented runtime using NWjs to open pgAdmin4 in a standalone window instead of the system tray and web browser.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6148">Issue #6148</a> -  Added Quick Search functionality for menu items and help articles.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6153">Issue #6153</a> -  Added publication and subscription support in Schema Diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6170">Issue #6170</a> -  Ensure logs are not stored in the container, and only sent to the console.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5017">Issue #5017</a> -  Use cheroot as the default production server for pgAdmin4.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6145">Issue #6145</a> -  Documentation of Logical Replication.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6195">Issue #6195</a> -  Documentation of runtime with NWjs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6196">Issue #6196</a> -  Documentation of Quick Search support.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6207">Issue #6207</a> -  Updated the JS dependencies to the latest.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5809">Issue #5809</a> -  Fixed an issue where the focus is not properly set on the filter text editor after closing the error dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5871">Issue #5871</a> -  Ensure that username should be visible in the ‘Connect to Server’ popup when service and user name both specified.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6045">Issue #6045</a> -  Fixed autocomplete issue where it is not showing any suggestions if the schema name contains escape characters.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6087">Issue #6087</a> -  Fixed an issue where the dependencies tab showing multiple owners for the objects having shared dependencies.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6117">Issue #6117</a> -  Fixed an issue where the user is unable to update column-level privileges from the security tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6143">Issue #6143</a> -  Fixed an issue where shared server entries not getting deleted from SQLite database if the user gets deleted.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6157">Issue #6157</a> -  Fixed an issue where strike-through is not visible for rows selected for deletion after scrolling.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6163">Issue #6163</a> -  Fixed an issue where Zoom to fit button only works if the diagram is larger than the canvas.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6164">Issue #6164</a> -  Ensure that the diagram should not vanish entirely if zooming out too far in ERD.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6177">Issue #6177</a> -  Fixed an issue while downloading ERD images in Safari and Firefox.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6178">Issue #6178</a> -  Fixed an issue where the user unable to change the background color for a server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6179">Issue #6179</a> -  Fixed an issue where Generate SQL displayed twice in the ERD tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6180">Issue #6180</a> -  Updated missing documentation for the ‘Download Image’ option in ERD.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6187">Issue #6187</a> -  Limit the upgrade check to run once per day.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6193">Issue #6193</a> -  Ensure that ERD throws a warning before closing unsaved changes if open in a new tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6197">Issue #6197</a> -  Fixed an issue where the ERD image is not properly downloaded.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6201">Issue #6201</a> -  Added SSL support for creating a subscription.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6208">Issue #6208</a> -  Fixed an issue where utility(Backup, Maintenance, …) jobs are failing when the log level is set to DEBUG.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6230">Issue #6230</a> -  Fixed an issue where the user is not able to create the subscription.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6250">Issue #6250</a> -  Ensure DEB/RPM packages depend on the same version of each other.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_5_0.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

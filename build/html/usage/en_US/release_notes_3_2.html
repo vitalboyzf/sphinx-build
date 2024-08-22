@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 3.2 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-3-2">
+<h1>Version 3.2<a class="headerlink" href="#version-3-2" title="Link to this heading">¶</a></h1>
+<p>Release date: 2018-08-09</p>
+<p>This release contains a number of features and fixes reported since the release
+of pgAdmin4 3.1</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2136">Issue #2136</a> - Added version number for URL’s to ensure that files are only cached on a per-version basis.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2214">Issue #2214</a> - Add support for SCRAM password changes (requires psycopg2 &gt;= 2.8).</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3074">Issue #3074</a> - Add support for reset saved password.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3397">Issue #3397</a> - Add support for Trigger and JIT stats in the graphical query plan viewer.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3412">Issue #3412</a> - Add support for primary key, foreign key, unique key, indexes and triggers on partitioned tables for PG/EPAS 11.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3506">Issue #3506</a> - Allow the user to specify a fixed port number in the runtime to aid cookie whitelisting etc.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3510">Issue #3510</a> - Add a menu option to the runtime to copy the appserver URL to the clipboard.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3185">Issue #3185</a> - Fix the upgrade check on macOS.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3191">Issue #3191</a> - Fix a number of debugger execution issues.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3294">Issue #3294</a> - Infrastructure (and changes to the Query Tool, Dashboards and Debugger) for realtime preference handling.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3309">Issue #3309</a> - Fix Directory format support for backups.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3316">Issue #3316</a> - Support running on systems without a system tray.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3319">Issue #3319</a> - Cleanup and fix handling of Query Tool Cancel button status.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3363">Issue #3363</a> - Fix restoring of restore options for sections.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3371">Issue #3371</a> - Don’t create a session when the /misc/ping test endpoint is called.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3446">Issue #3446</a> - Various procedure/function related fixes for EPAS/PG 11.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3448">Issue #3448</a> - Exclude system columns in Import/Export.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3457">Issue #3457</a> - Fix debugging of procedures in EPAS packages.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3458">Issue #3458</a> - pgAdmin4 should work with python 3.7.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3468">Issue #3468</a> - Support SSH tunneling with keys that don’t have a passphrase.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3471">Issue #3471</a> - Ensure the SSH tunnel port number is honoured.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3511">Issue #3511</a> - Add support to save and clear SSH Tunnel password.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3526">Issue #3526</a> - COST statement should not be automatically duplicated after creating trigger function.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3527">Issue #3527</a> - View Data-&gt;Filtered Rows dialog should be displayed.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_3_2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

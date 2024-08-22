@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.18 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-18">
+<h1>Version 4.18<a class="headerlink" href="#version-4-18" title="Link to this heading">¶</a></h1>
+<p>Release date: 2020-02-06</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.17.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2554">Issue #2554</a> -  Added support for a multi-level partitioned table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3452">Issue #3452</a> -  Added a Schema Diff tool to compare two schemas and generate a diff script.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4762">Issue #4762</a> -  Allow screen-reader to read label &amp; description of non-textable elements.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4763">Issue #4763</a> -  Allow screen-reader to identify the alert errors.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4770">Issue #4770</a> -  Added labels and titles after parsing and validating all the pgAdmin4 web pages for accessibility.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4993">Issue #4993</a> -  Set input controls as read-only instead of disabled will allow tab navigation in the properties tab and also allow screen readers to read it.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5049">Issue #5049</a> -  Improve code coverage and API test cases for the CAST module.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5050">Issue #5050</a> -  Improve code coverage and API test cases for the LANGUAGE module.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5071">Issue #5071</a> -  Improve the test framework to run for multiple classes defined in a single file.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5072">Issue #5072</a> -  Updated wcDocker package which includes aria-label accessibility improvements.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5096">Issue #5096</a> -  Replace node-sass with sass for SCSS compilation.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3812">Issue #3812</a> -  Ensure that path file name should not disappear when changing ext from the dropdown in file explorer dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4410">Issue #4410</a> -  Fixed an issue while editing char[] or character varying[] column from View/Edit data throwing an error.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4511">Issue #4511</a> -  Fixed an issue where Grant wizard unable to handle multiple objects when the query string parameter exceeds its limit.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4601">Issue #4601</a> -  Added tab navigation on close buttons for all the panels and create/properties dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4827">Issue #4827</a> -  Fix column resizable issue in the file explorer dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5000">Issue #5000</a> -  Logout the pgAdmin session when no user activity of mouse move, click or keypress.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5025">Issue #5025</a> -  Fix an issue where setting STORAGE_DIR to empty should show all the volumes on Windows in server mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5065">Issue #5065</a> -  Updated the incorrect icon used for the cast node on refresh.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5066">Issue #5066</a> -  Fix an issue where refreshing a package results in the change in the object completely.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5074">Issue #5074</a> -  Fix an issue where select, insert and update scripts on tables throwing an error.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5076">Issue #5076</a> -  Ensure Postfix starts in the container, now it runs as non-root by default.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5116">Issue #5116</a> -  Fixed an issue where Save Password control disappears after clicking on it while creating a server.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_18.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

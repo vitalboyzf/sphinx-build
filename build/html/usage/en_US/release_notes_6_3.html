@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 6.3 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-6-3">
+<h1>Version 6.3<a class="headerlink" href="#version-6-3" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-12-16</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 6.2.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6543">Issue #6543</a> -  Added support for Two-factor authentication for improving security.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6872">Issue #6872</a> -  Include GSSAPI support in the PostgreSQL libraries and utilities on macOS.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7039">Issue #7039</a> -  Added support to disable the auto-discovery of the database servers.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6088">Issue #6088</a> -  Replace Flask-BabelEx with Flask-Babel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6984">Issue #6984</a> -  Port Backup Global, Backup Server, and Backup object dialog in React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7004">Issue #7004</a> -  Replaced alertifyjs notifiers with React-based notistack.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7010">Issue #7010</a> -  Upgrade Flask to version 2.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7053">Issue #7053</a> -  Replace Alertify alert and confirm with React-based model dialog.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6840">Issue #6840</a> -  Fixed an issue where tooltip data are not displaying on downloaded graphical explain plan.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6877">Issue #6877</a> -  Fixed schema diff owner related issue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6906">Issue #6906</a> -  Fixed an issue where referenced table drop-down should be disabled in foreign key -&gt; columns after one row is added.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6955">Issue #6955</a> -  Ensure that sort order should be maintained when renaming a server group.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6957">Issue #6957</a> -  Fixed schema diff related some issues.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6963">Issue #6963</a> -  Ensure that the user should be allowed to set the schema of an extension while creating it.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6978">Issue #6978</a> -  Increase the width of the scrollbars.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6986">Issue #6986</a> -  Fixed an issue where the user can’t debug function with timestamp parameter.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6989">Issue #6989</a> -  Fixed an issue where the Change Password menu option is missing for internal authentication source when more than one authentication source is defined.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7005">Issue #7005</a> -  Fixed an issue where On-demand rows throw an error when any row cell is edited and saved it then scroll to get more rows.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7006">Issue #7006</a> -  Ensure that Python 3.10 and the latest eventlet dependency should not break the application.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7013">Issue #7013</a> -  Fix an RPM build issue that could lead to a conflict with python3 at installation.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7015">Issue #7015</a> -  Fixed an issue where the error is thrown while creating a new server using Add New Server from the dashboard while tree item is not selected.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7020">Issue #7020</a> -  Ensure that statue message should not hide the last line of messages when running a long query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7024">Issue #7024</a> -  Fixed an issue where reverse engineering SQL is wrong for Aggregate.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7029">Issue #7029</a> -  Correct the SQL definition for function/procedure with the Atomic keyword in PG14.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7031">Issue #7031</a> -  Fixed an issue where SQLite database definition is wrong because the USER_ID FK references the table user_old which is not available.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7040">Issue #7040</a> -  Add “section” to the Debian package control files.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7044">Issue #7044</a> -  Update the dropzone version to 5.9.3 and Flask-SQLAlchemy to 2.5.*.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7046">Issue #7046</a> -  Fixed some accessibility issues.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7048">Issue #7048</a> -  Fixed unhashable type issue while opening the about dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7064">Issue #7064</a> -  Ensure that the Owner should not be disabled while creating the procedure.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7071">Issue #7071</a> -  Fixed an issue where confirmation pop-up is hidden behind Reassign/Drop Owned Dialog.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_6_3.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

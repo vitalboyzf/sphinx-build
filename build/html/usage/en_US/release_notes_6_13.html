@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 6.13 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-6-13">
+<h1>Version 6.13<a class="headerlink" href="#version-6-13" title="Link to this heading">¶</a></h1>
+<p>Release date: 2022-08-25</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin 4 v6.12.</p>
+<section id="supported-database-servers">
+<h2>Supported Database Servers<a class="headerlink" href="#supported-database-servers" title="Link to this heading">¶</a></h2>
+<p><strong>PostgreSQL</strong>: 10, 11, 12, 13 and 14</p>
+<p><strong>EDB Advanced Server</strong>: 10, 11, 12, 13 and 14</p>
+</section>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3709">Issue #3709</a> -  Added support to show all background processes in separate panel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7387">Issue #7387</a> -  Added support to create triggers from existing trigger functions in EPAS.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7344">Issue #7344</a> -  Port Role Reassign dialog to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7345">Issue #7345</a> -  Port User Management dialog to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7404">Issue #7404</a> -  Port process watcher to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7462">Issue #7462</a> -  Remove the SQL files for the unsupported versions of the database server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7567">Issue #7567</a> -  Port About dialog to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7568">Issue #7568</a> -  Port change user password and 2FA dialog to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7590">Issue #7590</a> -  Port change ownership dialog to React.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7595">Issue #7595</a> -  Update the container base image to Alpine 3.16 (with Python 3.10.5).</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7602">Issue #7602</a> -  Fixed improper parsing of HTTP requests in Pallets Werkzeug v2.1.0 and below (CVE-2022-29361).</div>
+</div>
+</div></blockquote>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7452">Issue #7452</a> -  Ensure that an error is thrown if clipboard access is not provided and change the copy rows shortcut.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7468">Issue #7468</a> -  Fixed an issue where the History tab is getting blank and showing an error after some queries are executed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7481">Issue #7481</a> -  Fixed an issue where OWNED BY was incorrectly set to NONE when adding user privileges on the sequence.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7497">Issue #7497</a> -  Fixed an issue with the error message being displayed at the right place for Azure deployments.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7521">Issue #7521</a> -  Fixed an issue where the Query Editor loses focus when saving a query (Alt+s).</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7527">Issue #7527</a> -  Fixed API test cases for Postgres 14.4.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7540">Issue #7540</a> -  Ensure that rename panel should work on view/edit panels.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7563">Issue #7563</a> -  Fixed an issue where autocomplete is not working after clearing the query editor.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7573">Issue #7573</a> -  Ensure that autocomplete does not appear when navigating code using arrow keys.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7575">Issue #7575</a> -  Fixed an issue where Alt-Shift-Q didn’t work after creating a new query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7579">Issue #7579</a> -  Fixed an issue where copy and pasting a row in the results grid doesn’t set the default for boolean.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7586">Issue #7586</a> -  Fixed an issue with rendering geometry when selecting a complete column.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7587">Issue #7587</a> -  Ensure that the children of information_schema and pg_catalog node should be displayed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7591">Issue #7591</a> -  Fixed column “none” does not exist issue, while comparing schema objects.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7596">Issue #7596</a> -  Fixed an issue where schema diff did not pick up the change in RLS policy.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7608">Issue #7608</a> -  Fixed an issue where the cloud deployment wizard creates the cluster with the High Availability even if that option is not selected.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7611">Issue #7611</a> -  Ensure that schema diff maintains view ownership when view definitions are modified.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7614">Issue #7614</a> -  Fixed crypt key is missing issue when logout from the pgAdmin.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7616">Issue #7616</a> -  Ensure that the next button should be disabled if the password did not match for Azure deployment.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7617">Issue #7617</a> -  Fixed an issue where Azure cloud deployment failed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7625">Issue #7625</a> -  Fixed Spanish translations typo.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7630">Issue #7630</a> -  Ensure that If the trigger function definition is changed, drop and recreate the trigger in the schema diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7632">Issue #7632</a> -  Fixed an issue where a user could not authenticate using Azure CLI on OSX.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7633">Issue #7633</a> -  Ensure that the autofocus is on the input control for the master password and server password dialogs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/7641">Issue #7641</a> -  Pin Flask-SocketIO &lt;= v5.2.0. The latest version does not support Werkzeug in production environments.</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_6_13.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

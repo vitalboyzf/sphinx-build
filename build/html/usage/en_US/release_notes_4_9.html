@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.9 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-9">
+<h1>Version 4.9<a class="headerlink" href="#version-4-9" title="Link to this heading">¶</a></h1>
+<p>Release date: 2019-06-27</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.8.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3174">Issue #3174</a> - Visually distinguish simple tables from tables that are inherited and from which other tables are inherited.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4202">Issue #4202</a> - Add a framework for testing reversed engineered SQL and CRUD API endpoints.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3994">Issue #3994</a> - Fix issue where the dependencies tab for inherited tables/foreign keys shows partial text.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4036">Issue #4036</a> - Allow editing of data where a primary key column includes a % sign in the value.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4171">Issue #4171</a> - Fix issue where reverse engineered SQL was failing for foreign tables, if it had “=” in the options.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4195">Issue #4195</a> - Fix keyboard navigation in “inner” tabsets such as the Query Tool and Debugger.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4228">Issue #4228</a> - Ensure the correct label is used in panel headers when viewing filtered rows.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4253">Issue #4253</a> - Fix issue where new column should be created with Default value.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4283">Issue #4283</a> - Initial support for PostgreSQL 12.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4288">Issue #4288</a> - Initial support for PostgreSQL 12.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4290">Issue #4290</a> - Initial support for PostgreSQL 12.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4255">Issue #4255</a> - Prevent the geometry viewer grabbing key presses when not in focus under Firefox, IE and Edge.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4306">Issue #4306</a> - Prevent the “Please login to access this page” message displaying multiple times.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4310">Issue #4310</a> - Ensure that the Return key can be used to submit the Master Password dialogue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4317">Issue #4317</a> - Ensure that browser auto-fill doesn’t cause Help pages to be opened unexpectedly.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4320">Issue #4320</a> - Fix issue where SSH tunnel connection using password is failing, it’s regression of Master Password.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4329">Issue #4329</a> - Fix an initialisation error when two functions with parameters are debugged in parallel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4343">Issue #4343</a> - Fix issue where property dialog of column should open properly for EPAS v12.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4345">Issue #4345</a> - Capitalize the word ‘export’ used in Import/Export module.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4349">Issue #4349</a> - Ensure strings are properly encoded in the Query History.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4350">Issue #4350</a> - Ensure we include the CSRF token when uploading files.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4357">Issue #4357</a> - Fix connection restoration issue when pgAdmin server is restarted and the page is refreshed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4360">Issue #4360</a> - Ensure the debugger control buttons are only enabled once initialisation is complete.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4362">Issue #4362</a> - Remove additional “SETOF” included when generating CREATE scripts for trigger functions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4365">Issue #4365</a> - Fix help links for backup globals and backup server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4367">Issue #4367</a> - Fix an XSS issue seen in View/Edit data mode if a column name includes HTML.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4378">Issue #4378</a> - Ensure Python escaping matched JS escaping and fix a minor XSS issue in the Query Tool that required superuser access to trigger.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4380">Issue #4380</a> - Ensure that both columns and partitions can be edited at the same time in the table dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4386">Issue #4386</a> - Fix an XSS issue when username contains XSS vulnerable text.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_9.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

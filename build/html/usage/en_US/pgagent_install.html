@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installing pgAgent &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="installing-pgagent">
+<span id="pgagent-install"></span><h1><span class="target" id="index-0"></span>Installing pgAgent<a class="headerlink" href="#installing-pgagent" title="Link to this heading">¶</a></h1>
+<p>pgAgent runs as a daemon on Unix systems, and a service on Windows systems.  In
+most cases it will run on the database server itself - for this reason, pgAgent
+is not automatically configured when pgAdmin is installed. In some cases
+however, it may be preferable to run pgAgent on multiple systems, against the
+same database; individual jobs may be targeted at a particular host, or left
+for execution by any host. Locking prevents execution of the same instance of a
+job by multiple hosts.</p>
+<section id="database-setup">
+<h2>Database setup<a class="headerlink" href="#database-setup" title="Link to this heading">¶</a></h2>
+<p>Before using pgAdmin to manage pgAgent, you must create the pgAgent extension in
+the maintenance database registered with pgAdmin.  To install pgAgent on a
+PostgreSQL host, connect to the <em>postgres</em> database, and navigate  through the
+<em>Tools</em> menu to open the Query tool.  For server versions 9.1 or later, and
+pgAgent 3.4.0 or later, enter the following command in the query window, and
+click the <em>Execute</em> icon:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">pgagent</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This command will create a number of tables and other objects in a schema
+called ‘pgagent’.</p>
+<p>The database must also have the pl/pgsql procedural language installed - use
+the PostgreSQL CREATE LANGUAGE command to install pl/pgsql if necessary.  To
+install pl/pgsql, enter the following command in the query window, and click
+the <em>Execute</em> icon:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="daemon-installation-on-unix">
+<h2>Daemon installation on Unix<a class="headerlink" href="#daemon-installation-on-unix" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>pgAgent is available in Debian/Ubuntu (DEB) and Redhat/Fedora (RPM)
+packages for Linux users, as well as source code. See the
+<a class="reference external" href="https://www.pgadmin.org/download/">pgAdmin Website</a>. for more
+information.</p>
+</div>
+<p>To install the pgAgent daemon on a Unix system, you will normally need to have
+root privileges to modify the system startup scripts.  Modifying system startup
+scripts is quite system-specific so you should consult your system documentation
+for further information.</p>
+<p>The program itself takes few command line options, most of which are only
+needed for debugging or specialised configurations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+  <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">pgagent</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">connect</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+
+<span class="n">options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">f</span> <span class="n">run</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">foreground</span> <span class="p">(</span><span class="n">do</span> <span class="ow">not</span> <span class="n">detach</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">terminal</span><span class="p">)</span>
+  <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">poll</span> <span class="n">time</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">seconds</span> <span class="p">(</span><span class="n">default</span> <span class="mi">10</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">retry</span> <span class="n">period</span> <span class="n">after</span> <span class="n">connection</span> <span class="n">abort</span> <span class="ow">in</span> <span class="n">seconds</span> <span class="p">(</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">default</span> <span class="mi">30</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="o">-</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">log</span> <span class="n">file</span> <span class="p">(</span><span class="n">messages</span> <span class="n">are</span> <span class="n">logged</span> <span class="n">to</span> <span class="n">STDOUT</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">specified</span><span class="p">)</span><span class="o">&gt;</span>
+  <span class="o">-</span><span class="n">l</span> <span class="o">&lt;</span><span class="n">logging</span> <span class="n">verbosity</span> <span class="p">(</span><span class="n">ERROR</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">WARNING</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">DEBUG</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">default</span> <span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The connection string is a standard PostgreSQL libpq connection string (see
+the <a class="reference external" href="https://www.postgresql.org/docs/current/libpq.html#libpq-connect">PostgreSQL documentation on the connection string</a>
+for further details). For example, the following command line will run pgAgent
+against a server listening on the localhost, using a database called ‘pgadmin’,
+connecting as the user ‘postgres’:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/path/to/pgagent<span class="w"> </span><span class="nv">hostaddr</span><span class="o">=</span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="nv">dbname</span><span class="o">=</span>postgres<span class="w"> </span><span class="nv">user</span><span class="o">=</span>postgres
+</pre></div>
+</div>
+</section>
+<section id="service-installation-on-windows">
+<h2>Service installation on Windows<a class="headerlink" href="#service-installation-on-windows" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>pgAgent is available in a pre-built installer if you use
+<a class="reference external" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EnterpriseDB’s PostgreSQL Installers</a>.
+Use the StackBuilder application to download and install it. If installed
+in this way, the service will automatically be created and the instructions
+below can be ignored.</p>
+</div>
+<p>pgAgent can install itself as a service on Windows systems.  The command line
+options available are similar to those on Unix systems, but include an
+additional parameter to tell the service what to do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span>
+  <span class="n">pgAgent</span> <span class="n">REMOVE</span> <span class="o">&lt;</span><span class="n">serviceName</span><span class="o">&gt;</span>
+  <span class="n">pgAgent</span> <span class="n">INSTALL</span> <span class="o">&lt;</span><span class="n">serviceName</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">connect</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+  <span class="n">pgAgent</span> <span class="n">DEBUG</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">connect</span><span class="o">-</span><span class="n">string</span><span class="o">&gt;</span>
+
+  <span class="n">options</span><span class="p">:</span>
+    <span class="o">-</span><span class="n">u</span> <span class="o">&lt;</span><span class="n">user</span> <span class="ow">or</span> <span class="n">DOMAIN</span>\<span class="n">user</span><span class="o">&gt;</span>
+    <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+    <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">displayname</span><span class="o">&gt;</span>
+    <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">poll</span> <span class="n">time</span> <span class="n">interval</span> <span class="ow">in</span> <span class="n">seconds</span> <span class="p">(</span><span class="n">default</span> <span class="mi">10</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">retry</span> <span class="n">period</span> <span class="n">after</span> <span class="n">connection</span> <span class="n">abort</span> <span class="ow">in</span> <span class="n">seconds</span> <span class="p">(</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">default</span> <span class="mi">30</span><span class="p">)</span><span class="o">&gt;</span>
+    <span class="o">-</span><span class="n">l</span> <span class="o">&lt;</span><span class="n">logging</span> <span class="n">verbosity</span> <span class="p">(</span><span class="n">ERROR</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">WARNING</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">DEBUG</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">default</span> <span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The service may be quite simply installed from the command line as follows
+(adjust the path as required):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;C:\Program Files\pgAgent\bin\pgAgent&quot;</span><span class="w"> </span>INSTALL<span class="w"> </span>pgAgent<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span>secret<span class="w"> </span><span class="nv">hostaddr</span><span class="o">=</span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="nv">dbname</span><span class="o">=</span>postgres<span class="w"> </span><span class="nv">user</span><span class="o">=</span>postgres
+</pre></div>
+</div>
+<p>You can then start the service at the command line using <em>net start pgAgent</em>,
+or from the <em>Services</em> control panel applet. Any logging output or errors will
+be reported in the Application event log. The DEBUG mode may be used to run
+pgAgent from a command prompt. When run this way, log messages will output to
+the command window.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/pgagent_install.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

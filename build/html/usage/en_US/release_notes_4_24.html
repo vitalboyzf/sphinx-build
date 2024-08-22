@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.24 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-24">
+<h1>Version 4.24<a class="headerlink" href="#version-4-24" title="Link to this heading">¶</a></h1>
+<p>Release date: 2020-07-23</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.23.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5235">Issue #5235</a> -  Support configuration files that are external to the application installation.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5484">Issue #5484</a> -  Added support for LDAP authentication with different DN by setting the dedicated user for the LDAP connection.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5583">Issue #5583</a> -  Added support for schema level restriction.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5601">Issue #5601</a> -  Added RLS Policy support in Schema Diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5622">Issue #5622</a> -  Added support for permissive/restricted policy type while creating RLS Policy.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5650">Issue #5650</a> -  Added support for LDAP anonymous binding.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5653">Issue #5653</a> -  Added High Contrast theme support.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5323">Issue #5323</a> -  Improve code coverage and API test cases for Foreign Data Wrapper.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5326">Issue #5326</a> -  Improve code coverage and API test cases for Domain and Domain Constraints.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5329">Issue #5329</a> -  Improve code coverage and API test cases for FTS Configuration, FTS Parser, FTS Dictionaries, and FTS Template.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3814">Issue #3814</a> -  Fixed issue of error message not getting displayed when filename is empty for backup, restore, and import/export.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3851">Issue #3851</a> -  Add proper indentation to the code while generating functions, procedures, and trigger functions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4235">Issue #4235</a> -  Fixed tab indent issue on a selection of lines is deleting the content when ‘use spaces == true’ in the preferences.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5137">Issue #5137</a> -  Fixed save button enable issue when focusing in and out of numeric input field.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5287">Issue #5287</a> -  Fixed dark theme-related CSS and modify the color codes.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5414">Issue #5414</a> -  Use QStandardPaths::AppLocalDataLocation in the runtime to determine where to store runtime logs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5463">Issue #5463</a> -  Fixed an issue where CSV download quotes numeric columns.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5470">Issue #5470</a> -  Fixed backgrid row hover issue where on hover background color is set for edit and delete cell only.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5530">Issue #5530</a> -  Ensure that the referenced table should be displayed on foreign key constraints.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5554">Issue #5554</a> -  Replace the runtime themes with ones that don’t have sizing issues.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5569">Issue #5569</a> -  Fixed reverse engineered SQL for partitions when storage parameters are specified.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5577">Issue #5577</a> -  Include LICENSE and DEPENDENCIES [inventory] files in official packages.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5621">Issue #5621</a> -  Remove extra brackets from reverse engineering SQL of RLS Policy.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5629">Issue #5629</a> -  Fixed an issue where the user is able to edit properties when some of the collection nodes are selected.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5630">Issue #5630</a> -  Fixed an issue where installation of pgadmin4 not working on 32-bit Windows.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5631">Issue #5631</a> -  Fixed ‘cant execute empty query’ issue when remove the value of ‘USING’ or ‘WITH CHECK’ option of RLS Policy.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5633">Issue #5633</a> -  Ensure that create RLS Policy menu should not be visible for catalog objects.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5647">Issue #5647</a> -  Fixed an issue where difference DDL is showing the wrong SQL when changing the policy owner.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5662">Issue #5662</a> -  Fixed accessibility issue where few dialogs are not rendering properly when we zoomed in browser window 200% and screen resolution is low.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5666">Issue #5666</a> -  Added missing dependencies/dependent and corrected some wrongly identified.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5673">Issue #5673</a> -  Fixed an issue where fetching the schema throws an error if the database is not connected in Schema Diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5675">Issue #5675</a> -  Fixed CSRF errors when pgAdmin opened in an iframe on safari browser.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5677">Issue #5677</a> -  Fixed text color issue in explain analyze for the Dark theme.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5686">Issue #5686</a> -  Fixed issue where the user was not able to update policy if the policy is created with space.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_24.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

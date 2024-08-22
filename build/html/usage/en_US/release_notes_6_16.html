@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 6.16 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-6-16">
+<h1>Version 6.16<a class="headerlink" href="#version-6-16" title="Link to this heading">¶</a></h1>
+<p>Release date: 2022-11-18</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin 4 v6.15.</p>
+<section id="supported-database-servers">
+<h2>Supported Database Servers<a class="headerlink" href="#supported-database-servers" title="Link to this heading">¶</a></h2>
+<p><strong>PostgreSQL</strong>: 10, 11, 12, 13, 14 and 15</p>
+<p><strong>EDB Advanced Server</strong>: 10, 11, 12, 13, 14 and 15</p>
+</section>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/1832">Issue #1832</a> -  Added support for storing configurations of pgAdmin in an external database.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/4756">Issue #4756</a> -  Added the ability to generate ERDs for tables.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5468">Issue #5468</a> -  Add the possibility to configure the Oauth2 claim which is used for the pgAdmin username.</div>
+</div>
+</div></blockquote>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/2174">Issue #2174</a> -  Ensure that the browser tree should auto scroll to the selected node when expanding the server node.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/4841">Issue #4841</a> -  Use SocketIO instead of REST for schema diff compare.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5066">Issue #5066</a> -  Ensure that users can use custom characters as CSV field separators/CSV quotes when downloading query results.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5058">Issue #5058</a> -  Ensure that the save button should be disabled by default on the Sort/Filter dialog in the query tool.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5098">Issue #5098</a> -  Fix an issue where the save button is enabled when the table properties dialog is opened.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5122">Issue #5122</a> -  Ensure that the spinner should be visible on the browser tree on node refresh.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5149">Issue #5149</a> -  Ensure the Generate ERD option is hidden if the connection to the database is not allowed.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5206">Issue #5206</a> -  Reposition the select dropdown when the browser is resized.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5281">Issue #5281</a> -  Ensure that autocomplete works properly with objects starting with double quotes.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5344">Issue #5344</a> -  Ensure that pgAdmin routes should have the SCRIPT_NAME prefix.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5424">Issue #5424</a> -  Ensure that the appropriate permissions are set on the key file before trying an SSL connection with the server in server mode.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5429">Issue #5429</a> -  Fixed an issue where parameters for roles were not visible.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5452">Issue #5452</a> -  The container deployment document should include the server.json file format.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5455">Issue #5455</a> -  Fixed an issue where the dependents tab wasn’t working for PG 15.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5458">Issue #5458</a> -  Ensure that the browser path column in the search object shows the complete path.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5463">Issue #5463</a> -  Fixed an issue where the result grid was not working properly while trying to edit data by hitting Enter key.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5465">Issue #5465</a> -  Fixed an issue where the screen was freezing while closing the wcDocker panel.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5473">Issue #5473</a> -  Fixed an issue where AutoComplete was not working correctly due to incorrect regex.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5475">Issue #5475</a> -  Fixed an issue where the ‘Confirm on close or refresh’ setting was ignored when closing the query/ERD tool opened in the new tab.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5507">Issue #5507</a> -  Fixed an issue where pgadmin does not respect reverse proxy any more.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5521">Issue #5521</a> -  Fixed SocketIO calls when pgAdmin 4 server is running from a sub directory.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5522">Issue #5522</a> -  Ensure that the load file paths are children of the storage directory.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5533">Issue #5533</a> -  Use the shared server username when opening query tool.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5535">Issue #5535</a> -  Fixed an issue where the ‘save_password’ column threw an error for the shared server when using an external database.</div>
+<div class="line"><a class="reference external" href="https://github.com/pgadmin-org/pgadmin4/issues/5537">Issue #5537</a> -  Ensure that the correct error message in ERD for permission denied should be shown.</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_6_16.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

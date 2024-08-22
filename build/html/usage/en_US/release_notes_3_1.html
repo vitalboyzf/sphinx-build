@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 3.1 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-3-1">
+<h1>Version 3.1<a class="headerlink" href="#version-3-1" title="Link to this heading">¶</a></h1>
+<p>Release date: 2018-06-28</p>
+<p>This release contains a number of features and fixes reported since the release
+of pgAdmin4 3.0</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1447">Issue #1447</a> - Add support for SSH tunneled connections</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2686">Issue #2686</a> - Add an option to auto-complete keywords in upper case</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3204">Issue #3204</a> - Add support for LISTEN/NOTIFY in the Query Tool</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3273">Issue #3273</a> - Allow sorting in the file dialogue</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3362">Issue #3362</a> - Function and procedure support for PG11</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3388">Issue #3388</a> - Allow the connection timeout to be configured on a per-server basis</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1220">Issue #1220</a> - Backup and Restore should not be started if database name contains “=” symbol</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1221">Issue #1221</a> - Maintenance should not be started if database name contains “=” symbol</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3179">Issue #3179</a> - Fix an error generating SQL for trigger functions</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3238">Issue #3238</a> - Standardise the error handling for parsing of JSON response messages from the server</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3250">Issue #3250</a> - Fix handling of SQL_ASCII data in the Query Tool</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3257">Issue #3257</a> - Catch errors when trying to EXPLAIN an invalid query</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3277">Issue #3277</a> - Ensure server cleanup on exit only happens if the server actually started up</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3284">Issue #3284</a> - F5 key should work to refresh Browser tree</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3289">Issue #3289</a> - Fix handling of SQL_ASCII data in the Query Tool</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3290">Issue #3290</a> - Close button added to the alertify message box, which pops up in case of backend error</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3295">Issue #3295</a> - Ensure the debugger gets focus when loaded so shortcut keys work as expected</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3298">Issue #3298</a> - Fixed Query Tool keyboard issue where arrow keys were not behaving as expected for execute options dropdown</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3303">Issue #3303</a> - Fix a Japanese translation error that could prevent the server starting up</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3306">Issue #3306</a> - Fixed display SQL of table with index for Greenplum database</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3307">Issue #3307</a> - Allow connections to servers with port numbers &lt; 1024 which may be seen in container environments</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3308">Issue #3308</a> - Fixed issue where icon for Partitioned tables was the same as Non Partitioned tables for Greenplum database</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3310">Issue #3310</a> - Fixed layout of the alertify error message in the Query Tool</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3324">Issue #3324</a> - Fix the template loader to work reliably under Windows (fixing external tables under Greenplum)</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3333">Issue #3333</a> - Ensure the runtime core application is setup before trying to access any settings</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3342">Issue #3342</a> - Set SESSION_COOKIE_SAMESITE=’Lax’ per Flask recommendation to prevents sending cookies with CSRF-prone requests from external sites, such as submitting a form</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3353">Issue #3353</a> - Handle errors properly if they occur when renaming a database</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3356">Issue #3356</a> - Include the schema name on RE-SQL for packages</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3374">Issue #3374</a> - Fix autocomplete</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3392">Issue #3392</a> - Fix IPv6 support in the container build</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3409">Issue #3409</a> - Avoid an exception on GreenPlum when retrieving RE-SQL on a table</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3411">Issue #3411</a> - Fix a French translation error that could prevent the server starting up</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3431">Issue #3431</a> - Fix the RE-SQL generation for GreenPlum external tables</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_3_1.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

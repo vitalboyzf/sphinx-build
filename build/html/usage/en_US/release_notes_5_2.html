@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 5.2 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-5-2">
+<h1>Version 5.2<a class="headerlink" href="#version-5-2" title="Link to this heading">¶</a></h1>
+<p>Release date: 2021-04-22</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 5.1.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5319">Issue #5319</a> -  Improve code coverage and API test cases for Server module.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4001">Issue #4001</a> -  Updated docs and screenshots to cover the Notifications tab on the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5519">Issue #5519</a> -  Ensure that the query tool tab should be closed after server disconnection when auto-commit/auto-rollback is set to false.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5908">Issue #5908</a> -  Fixed an issue where shortcut keys are not working with manage macro.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6076">Issue #6076</a> -  Fixed an issue where correct error not thrown while importing servers and JSON file has incorrect/insufficient keys.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6082">Issue #6082</a> -  Ensure that the user should not be to change the connection when a long query is running.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6107">Issue #6107</a> -  Fixed flickering issue of the input box on check constraints.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6161">Issue #6161</a> -  Fixed an issue where the cursor shifts its focus to the wrong window for all the query tool related model dialogs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6220">Issue #6220</a> -  Corrected the syntax for ‘CREATE TRIGGER’, use ‘EXECUTE FUNCTION’ instead of ‘EXECUTE PROCEDURE’ from v11 onwards.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6274">Issue #6274</a> -  Ensure that the strings in the LDAP auth module are translatable.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6293">Issue #6293</a> -  Fixed an issue where the procedure creation is failed when providing the Volatility option.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6306">Issue #6306</a> -  Fixed an issue while selecting the row which was deleted just before the selection operation.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6325">Issue #6325</a> -  Ensure that the file format for the storage manager should be ‘All files’ and for other dialogs, it should remember the last selected format.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6327">Issue #6327</a> -  Ensure that while comparing domains check function dependencies should be considered in schema diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6333">Issue #6333</a> -  Fixed sizing issue of help dialog for Query Tool and ERD Tool when open in the new browser tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6334">Issue #6334</a> -  Fixed SQL panel black screen issue when detaching it in runtime.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6338">Issue #6338</a> -  Added missing dependency ‘xdg-utils’ for the desktop packages in RPM and Debian.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6344">Issue #6344</a> -  Fixed cannot unpack non-iterable response object error when selecting any partition.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6356">Issue #6356</a> -  Mark the Apache HTTPD config file as such in the web DEB and RPM packages.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6367">Issue #6367</a> -  Fixed an issue where the Save button is enabled by default when open the table’s properties dialog on PG 9.5.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6375">Issue #6375</a> -  Fixed an issue where users are unable to see data of the partitions using the View/Edit data option.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6376">Issue #6376</a> -  Fixed an issue where a connection warning should be displayed on the user clicks on explain or explain analyze and the database server is disconnected from the browser tree.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/6379">Issue #6379</a> -  Fixed an issue where foreign data wrapper properties are not visible if the host option contains two host addresses.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_5_2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

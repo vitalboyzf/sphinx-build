@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.15 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-15">
+<h1>Version 4.15<a class="headerlink" href="#version-4-15" title="Link to this heading">¶</a></h1>
+<p>Release date: 2019-11-14</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.14.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1974">Issue #1974</a> -  Added encrypted password in reverse engineered SQL for roles.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3741">Issue #3741</a> -  Added Dark(Beta) UI Theme option.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4006">Issue #4006</a> -  Support Enable Always and Enable Replica on triggers.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4351">Issue #4351</a> -  Add an option to request confirmation before cancelling/resetting changes on a Properties dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4348">Issue #4348</a> -  Added support for custom theme creation and selection.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3130">Issue #3130</a> -  Ensure create new object dialog should be opened when alt+shift+n key is pressed on the collection node.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3279">Issue #3279</a> -  Fixed issue where Drop and Disconnect connection menu points are too close to each other.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3789">Issue #3789</a> -  Ensure context menus never get hidden below the menu bar.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3859">Issue #3859</a> -  Rename the context menu from ‘Drop Server’ to ‘Remove Server’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3913">Issue #3913</a> -  Ensure the correct “running at” agent is shown when a pgAgent job is executing.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3915">Issue #3915</a> -  Fix an issue in the Query Tool where shortcut keys could be ignored following a query error.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3999">Issue #3999</a> -  Fix the toggle case shortcut key combination.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4173">Issue #4173</a> -  Fix an issue where a black arrow-kind image is displaying at the background of browser tree images.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4191">Issue #4191</a> -  Ensure comments are shown in reverse engineered SQL for table partitions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4242">Issue #4242</a> -  Handle NULL values appropriately when sorting backgrid tables.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4341">Issue #4341</a> -  Give appropriate error messages when the user tries to use an blank master password.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4451">Issue #4451</a> -  Remove arbitrary (and incorrect) requirement that composite types must have at least two members.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4459">Issue #4459</a> -  Don’t quote bigints when copying them from the Query Tool results grid.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4482">Issue #4482</a> -  Ensure compression level is passed to pg_dump when backing up in directory format.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4483">Issue #4483</a> -  Ensure the number of jobs can be specified when backing up in directory format.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4564">Issue #4564</a> -  Ensure Javascript errors during Query Tool execution are reported as such and not as Ajax errors.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4610">Issue #4610</a> -  Suppress Enter key presses in Alertify dialogues when the come from Select2 controls to allow item selection with Enter.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4647">Issue #4647</a> -  Ensure that units are respected when sorting by file size in the File dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4730">Issue #4730</a> -  Ensure all messages are retained in the Query Tool from long running queries.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4734">Issue #4734</a> -  Updated documentation for the delete row button that only strikeout the row instead of deleting it.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4779">Issue #4779</a> -  Updated documentation for the query tool toolbar buttons.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4835">Issue #4835</a> -  Fixed an issue where psql of v12 throwing “symbol not found” error while running Maintenance and Import/Export.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4845">Issue #4845</a> -  Fixed potential error in the properties dialog for the Code tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4850">Issue #4850</a> -  Fixed an issue where Datetimepicker control opens when clicking on the label.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4895">Issue #4895</a> -  Fixed potential issue in reset function for nested objects.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4896">Issue #4896</a> -  Fixed an issue where escape key not working to close the open/save file dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4906">Issue #4906</a> -  Fixed an issue where keyboard shortcut for context menu is not working when using Firefox on CentOS7.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4924">Issue #4924</a> -  Fixed docker container exit issue occurs due to change in Gunicorn’s latest version.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_15.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

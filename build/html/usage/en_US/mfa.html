@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Enabling two-factor authentication (2FA) &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="enabling-two-factor-authentication-2fa">
+<span id="mfa"></span><h1><span class="target" id="index-0"></span>Enabling two-factor authentication (2FA)<a class="headerlink" href="#enabling-two-factor-authentication-2fa" title="Link to this heading">¶</a></h1>
+<section id="about-two-factor-authentication">
+<h2>About two-factor authentication<a class="headerlink" href="#about-two-factor-authentication" title="Link to this heading">¶</a></h2>
+<p>Two-factor authentication (2FA) is an extra layer of security used when logging
+into websites or apps. With 2FA, you have to log in with your username and
+password and provide another form of authentication that only you know or have
+access to.</p>
+</section>
+<section id="setup-two-factor-authentication">
+<h2>Setup two-factor authentication<a class="headerlink" href="#setup-two-factor-authentication" title="Link to this heading">¶</a></h2>
+<p>To set up 2FA for pgAdmin 4, you must configure the Two-factor Authentication
+settings in <em>config_local.py</em> or <em>config_system.py</em> (see the
+<span class="xref std std-ref">config.py</span> documentation) on the system where pgAdmin is
+installed in Server mode. You can copy these settings from <em>config.py</em> file and
+modify the values for the following parameters.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 38.9%" />
+<col style="width: 61.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Parameter</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MFA_ENABLED</p></td>
+<td><p>The default value for this parameter is True.
+To disable 2FA, set the value to <em>False</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>SUPPORTED_MFA_LIST</p></td>
+<td><p>Set the authentication methods to be supported</p></td>
+</tr>
+<tr class="row-even"><td><p>MFA_EMAIL_SUBJECT</p></td>
+<td><p>&lt;APP_NAME&gt; - Verification Code e.g. pgAdmin 4 -
+Verification Code</p></td>
+</tr>
+<tr class="row-odd"><td><p>MFA_FORCE_REGISTRATION</p></td>
+<td><p>Force the user to configure the authentication
+method on login (if no authentication is already configured).</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>NOTE: You must set the ‘Mail server settings’ in config_local.py or
+config_system.py in order to use ‘email’ as two-factor authentication method
+(see the</em> <span class="xref std std-ref">config.py</span> <em>documentation).</em></p>
+</section>
+<section id="configure-two-factor-authentication">
+<h2>Configure two-factor authentication<a class="headerlink" href="#configure-two-factor-authentication" title="Link to this heading">¶</a></h2>
+<p>To configure 2FA for a user, you must click on ‘Two-factor Authentication’
+in the <cite>User</cite> menu in right-top corner. It will list down all the supported
+multi factor authentication methods. Click on ‘Setup’ of one of those methods
+and follow the steps for each authentication method. You will see the <cite>Delete</cite>
+button for the authentication method, which is already been configured.
+Clicking on <cite>Delete</cite> button will deregister the authentication method for the
+current user.</p>
+<img alt="Configure two-factor authentication" class="align-center" src="../../_images/mfa_registration.png" />
+<p>You can also force users to configure the two-factor
+authentication methods on login by setting <em>MFA_FORCE_REGISTRATION</em> parameter
+to <em>True</em>.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/mfa.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 1.1 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-1-1">
+<h1>Version 1.1<a class="headerlink" href="#version-1-1" title="Link to this heading">¶</a></h1>
+<p>Release date: 2016-10-27</p>
+<p>This release contains a number of features and fixes reported since the release
+of pgAdmin4 1.0;</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1328">Issue #1328</a> - Add Python 3.5 Support</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1859">Issue #1859</a> - Include wait information on the activity tab of the dashboards</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1155">Issue #1155</a> - Display the start value when the user creates sequence</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1531">Issue #1531</a> - Fix to update privileges for Views and Materials Views where “string indices must be integers error” displayed</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1574">Issue #1574</a> - Display SQL in SQL pane for security label in PG and EPAS server</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1576">Issue #1576</a> - Make security label option available in procedure properties</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1577">Issue #1577</a> - Make debug option available for package function and procedure</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1596">Issue #1596</a> - Correct spelling error from evnt_turncate to evnt_truncate</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1599">Issue #1599</a> - Ensure the grant wizard works with objects with special characters in the name</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1622">Issue #1622</a> - Fix issue using special characters when creating synonym</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1728">Issue #1728</a> - Properties refreshing after objects are edited</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1739">Issue #1739</a> - Prevent the user from trying to…..</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1785">Issue #1785</a> - Correctly identify server type upon first connection</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1786">Issue #1786</a> - Ensure errorModel unset property is set correctly when adding a new server</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1808">Issue #1808</a> - Set seconds to valid value in pgAgent job schedule</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1817">Issue #1817</a> - Display message “server does not support ssl” if server with ca-cert or ca-full added</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1821">Issue #1821</a> - Optionally sign both the Mac app bundle and the disk image</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1822">Issue #1822</a> - Handle non-ascii responses from the server when connecting</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1823">Issue #1823</a> - Attempt to sign the Windows installer, failing with a warning if there’s no cert available</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1824">Issue #1824</a> - Add documenation for pgAgent</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1835">Issue #1835</a> - Allow users to choose SELECT permissions for tables and sequences in the grant wizard</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1837">Issue #1837</a> - Fix refreshing of FTS dictionaries which was causing error “Connection to the server has been lost”</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1838">Issue #1838</a> - Don’t append new objects with the wrong parent in tree browser if the correct one isn’t loaded</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1843">Issue #1843</a> - Function definition matches value returned from pg_get_functiondef()</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1845">Issue #1845</a> - Allow refreshing synonym node.  Does not display message “Unimplemented method (node) for this url (/browser/synonym/nodes/1/7/14301/2200/test)”</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1847">Issue #1847</a> - Identify the collation correctly when reverse engineering table SQL.  ERROR:  schema “default” does not exist no longer displayed</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1849">Issue #1849</a> - Remove security keys from config.py/config_local.py</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1857">Issue #1857</a> - Fix error while renaming FTS dictionary and FTS template nodes</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1858">Issue #1858</a> - Ensure the File Manager honours the file type while traversing the directories.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1861">Issue #1861</a> - Properly generate exclusion constraint SQL.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1863">Issue #1863</a> - Correctly quote type names in reverse engineered SQL for tables</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1864">Issue #1864</a> - Fix layout of DateTimePicker control help message.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1867">Issue #1867</a> - Allow package bodies to be dropped.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1868">Issue #1868</a> - Resolved issue where Integer type of preferences are not updated</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1872">Issue #1872</a> - Fix the file manager when used under Python 3.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1877">Issue #1877</a> - Ensure preferences values are stored properly.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1878">Issue #1878</a> - Ensure steps and schedules can be created in empty jobs.  ProgrammingError: can’t adapt type ‘Undefined’ was displayed</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1880">Issue #1880</a> - Add new indexes to the correct parent on the treeview.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_1_1.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Code Review Notes &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="code-review-notes">
+<span id="code-review"></span><h1><span class="target" id="index-0"></span>Code Review Notes<a class="headerlink" href="#code-review-notes" title="Link to this heading">¶</a></h1>
+<p>This document lists a number of standard items that will be checked during the
+review process for any changes submitted for inclusion in pgAdmin.</p>
+<ul>
+<li><p>Ensure all code follows the pgAdmin <a class="reference internal" href="coding_standards.html"><span class="doc">Coding Standards</span></a>.</p></li>
+<li><p>Ensure all code has unit test coverage and API/feature test coverage where
+appropriate.</p></li>
+<li><p>Copyright years must be correct and properly formatted (to make it easy to make
+bulk updates every year). The start date should always be 2013, and the end year
+the current year, e.g.</p>
+<blockquote>
+<div><p>Copyright (C) 2013 - 2023, The pgAdmin Development Team</p>
+</div></blockquote>
+</li>
+<li><p>Ensure there’s a blank line immediately following any copyright headers.</p></li>
+<li><p>Include PyDoc comments for functions, classes and modules. Node modules should
+be “””Implements the XXXX node”””.</p></li>
+<li><p>Ensure that any generated SQL does not have any leading or trailing blank lines
+and consistently uses 4 space indents for nice formatting.</p></li>
+<li><p>Don’t special-case any Slony objects. pgAdmin 4 will have no direct knowledge
+of Slony, unlike pgAdmin 3.</p></li>
+<li><p>If you copy/paste modules, please ensure any comments are properly updated.</p></li>
+<li><p>Read all comments, and ensure they make sense and provide useful commentary on
+the code.</p></li>
+<li><p>Ensure that field labels both use PostgreSQL parlance, but also are descriptive.
+A good example is the “Init” field on an FTS Template - Init is the PG term, but
+adding the word “Function” after it makes it much more descriptive.</p></li>
+<li><p>Re-use code whereever possible, but factor it out into a suitably central
+location - don’t copy and paste it unless modifications are required!</p></li>
+<li><p>Format code nicely to make it readable. Break up logical chunks of code with
+blank lines, and comment well to describe what different sections of code are
+for or pertain to.</p></li>
+<li><p>Ensure that form validation works correctly and is consistent with other
+dialogues in the way errors are displayed.</p></li>
+<li><p>On dialogues with Schema or Owner fields, pre-set the default values to the
+current schema/user as appropriate. In general, if there are common or sensible
+default values available, put them in the fields for the user.</p></li>
+<li><p>1 Pull Request == 1 feature. If you need to fix/update existing
+infrastructure in your change, it’s usually easier if it’s in a separate
+Pull Request. Pull Requests containing multiple new features or unrelated
+changes are likely to be rejected.</p></li>
+<li><p>Ensure the change is fully functional, and works! If you wish to send a
+work in progress (WIP) change that is not intended for commit, instead of
+submitting a Pull Request, send either as a link to a repository fork or a
+patch to the <a class="reference external" href="mailto:pgadmin-hackers&#37;&#52;&#48;postgresql&#46;org">pgadmin-hackers<span>&#64;</span>postgresql<span>&#46;</span>org</a> mailing list, clearly stating
+that it’s a WIP, and noting what does or does not yet work.</p></li>
+</ul>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/code_review.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

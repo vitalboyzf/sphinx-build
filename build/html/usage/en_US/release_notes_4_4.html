@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.4 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-4">
+<h1>Version 4.4<a class="headerlink" href="#version-4-4" title="Link to this heading">¶</a></h1>
+<p>Release date: 2019-04-04</p>
+<p>This release contains a number of new features and fixes reported since the
+release of pgAdmin4 4.3.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>This release includes a bug fix
+(<a class="reference external" href="https://redmine.postgresql.org/issues/3887">Issue #3887</a>) which will
+rename the per-user storage directories for existing users when running in
+server mode. Previously, saved SQL queries were stored under the
+<em>STORAGE_DIR</em> in a sub-directory named after the username part of the user’s
+email address. From this version onwards, the full email address is used,
+with the &#64; replaced with an underscore. For example, in v.4.3 with
+<em>STORAGE_DIR</em> set to <em>/var/lib/pgadmin4</em> user files may be stored in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/var/lib/pgadmin4/storage/username/
+</pre></div>
+</div>
+<p>With the fix, that directory will be renamed (or created for new users) as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/var/lib/pgadmin4/storage/username_example.com/
+</pre></div>
+</div>
+</div>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2001">Issue #2001</a> - Add support for reverse proxied setups with Gunicorn, and document Gunicorn, uWSGI &amp; NGINX configurations.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4017">Issue #4017</a> - Make the Query Tool history persistent across sessions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4018">Issue #4018</a> - Remove the large and unnecessary dependency on React and 87 other related libraries.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4030">Issue #4030</a> - Add support for IDENTITY columns.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4075">Issue #4075</a> - Add an ePub doc build target.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1269">Issue #1269</a> - Fix naming inconsistency for the column and FTS parser modules.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2627">Issue #2627</a> - Include inherited column comments and defaults in reverse engineered table SQL.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3104">Issue #3104</a> - Improve a couple of German translations.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3887">Issue #3887</a> - Use the user’s full email address (not just the username part) as the basis for the storage directory name.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3968">Issue #3968</a> - Update wcDocker to fix the issue where the Scratch Pad grows in size if the results panel is resized.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3995">Issue #3995</a> - Avoid ‘bogus varno’ message from Postgres when viewing the SQL for a table with triggers.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4019">Issue #4019</a> - Update all Python and JavaScript dependencies.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4037">Issue #4037</a> - Include comment SQL for inherited columns in reverse engineered table SQL.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4050">Issue #4050</a> - Make the WHEN field a CodeMirror control on the Event Trigger dialogue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4052">Issue #4052</a> - Fix the online help button on the resource group dialogue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4053">Issue #4053</a> - Enable the online help button on the index dialogue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4054">Issue #4054</a> - Handle resultsets with zero columns correctly in the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4058">Issue #4058</a> - Include inherited columns in SELECT scripts.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4060">Issue #4060</a> - Fix the latexpdf doc build.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4062">Issue #4062</a> - Fix handling of numeric arrays in View/Edit Data.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4063">Issue #4063</a> - Enlarge the grab handles for resizing dialogs etc.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4069">Issue #4069</a> - Append the file suffix to filenames when needed in the File Create dialogue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4071">Issue #4071</a> - Ensure that Firefox prompts for a filename/location when downloading query results as a CSV file.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4073">Issue #4073</a> - Change the CodeMirror active line background colour to $color-danger-lighter so it doesn’t conflict with the selection colour.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4081">Issue #4081</a> - Fix the RE-SQL syntax for roles with a VALID UNTIL clause.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4082">Issue #4082</a> - Prevent an empty error message being shown when “downloading” a CREATE script using the CSV download.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4084">Issue #4084</a> - Overhaul the layout saving code so it includes the Query Tool and Debugger, and stores the layout when change events are detected rather than (unreliably) on exit.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4085">Issue #4085</a> - Display errors during CSV download from the Query Tool in the UI rather than putting them in the CSV file.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4090">Issue #4090</a> - Improve the German translation for Backup Server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4096">Issue #4096</a> - Ensure the toolbar buttons are properly reset following a CSV download in the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4099">Issue #4099</a> - Fix SQL help for EPAS 10+, and refactor the URL generation code into a testable function.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4100">Issue #4100</a> - Ensure sequences can be created with increment, start, minimum and maximum options set.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4105">Issue #4105</a> - Fix an issue where JSON data would not be rendered in the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4109">Issue #4109</a> - Ensure View/Materialized View node should be visible after updating any property.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4110">Issue #4110</a> - Fix custom autovacuum configuration for Materialized Views.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_4.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

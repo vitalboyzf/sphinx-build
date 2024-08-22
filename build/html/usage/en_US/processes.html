@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Processes &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="processes">
+<span id="id1"></span><h1><span class="target" id="index-0"></span>Processes<a class="headerlink" href="#processes" title="Link to this heading">¶</a></h1>
+<p>There are certain tasks which pgAdmin runs in the background. The processes
+running in the background can be viewed in the processes tab. It shows the
+process details of Backup, Restore, Maintenance, Import/Export and Cloud instance
+creation.</p>
+<img alt="Processes Tab" class="align-center" src="../../_images/processes_main.png" />
+<p>The columns of the processes table shows:</p>
+<ul class="simple">
+<li><p>The <em>PID</em> of the forked OS process.</p></li>
+<li><p>The <em>Type</em> of the task being performed.</p></li>
+<li><p>The <em>Server</em> name for which the task is.</p></li>
+<li><p>The <em>Object</em> can be a database, table, mview or anything which gives more info.</p></li>
+<li><p>The <em>Start Time</em> of the process, sorted descending by default.</p></li>
+<li><p>The current <em>Status</em> of the process. It can be Running, Finished, Failed, Terminated.</p></li>
+<li><p>The <em>Time Taken</em> to complete. It will keep updating if it is running.</p></li>
+</ul>
+<p>There are two action buttons on each row:</p>
+<ul class="simple">
+<li><p>The <em>Stop Process</em> button allows you to kill a running process.</p></li>
+<li><p>The <em>More details</em> button allows you to open the process watcher which shows the
+process logs and other details.</p></li>
+</ul>
+<p>You can also select the checkboxes and click on <em>Delete and Acknowledge</em> button
+on the top to clear the process info and logs.</p>
+<section id="process-watcher">
+<h2>Process Watcher<a class="headerlink" href="#process-watcher" title="Link to this heading">¶</a></h2>
+<img alt="Process Watcher" class="align-center" src="../../_images/processes_details.png" />
+<p>The Process Watcher logs all the activity associated with the process/task and provides
+additional information for troubleshooting
+Use the <strong>Stop Process</strong> button to stop the Backup process.</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>If you are running <em>pgAdmin</em> in <em>Server Mode</em> you can click on the <img alt="sm_icon" src="../../_images/sm_icon.png" /> icon in the process watcher window to open the file location in the Storage Manager. You can use the <a class="reference internal" href="storage_manager.html#storage-manager"><span class="std std-ref">Storage Manager</span></a> to download the backup file on the client machine .</p>
+</div>
+</section>
+<section id="watch-the-demo">
+<h2>Watch the demo<a class="headerlink" href="#watch-the-demo" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/processes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

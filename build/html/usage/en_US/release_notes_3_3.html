@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 3.3 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-3-3">
+<h1>Version 3.3<a class="headerlink" href="#version-3-3" title="Link to this heading">¶</a></h1>
+<p>Release date: 2018-09-06</p>
+<p>This release contains a number of features and fixes reported since the release
+of pgAdmin4 3.2</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1407">Issue #1407</a> - Add a geometry viewer that can render PostGIS data on a blank canvas or various map sources.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3503">Issue #3503</a> - Added new backup/restore options for PostgreSQL 11. Added dump options for ‘pg_dumpall’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3553">Issue #3553</a> - Add a Spanish translation.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3136">Issue #3136</a> - Stabilise feature tests for continuous running on CI systems.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3191">Issue #3191</a> - Fixed debugger execution issues.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3313">Issue #3313</a> - Ensure ‘select all’ and ‘unselect all’ working properly for pgAgent schedule.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3325">Issue #3325</a> - Fix sort/filter dialog issue where it incorrectly requires ASC/DESC.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3347">Issue #3347</a> - Ensure backup should work with ‘–data-only’ and ‘–schema-only’ for any format.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3407">Issue #3407</a> - Fix keyboard shortcuts layout in the preferences panel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3420">Issue #3420</a> - Merge pgcli code with version 1.10.3, which is used for auto complete feature.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3461">Issue #3461</a> - Ensure that refreshing a node also updates the Property list.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3525">Issue #3525</a> - Ensure that refresh button on dashboard should refresh the table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3528">Issue #3528</a> - Handle connection errors properly in the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3547">Issue #3547</a> - Make session implementation thread safe</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3548">Issue #3548</a> - Ensure external table node should be visible only for GPDB.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3554">Issue #3554</a> - Fix auto scrolling issue in debugger on step in and step out.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3558">Issue #3558</a> - Fix sort/filter dialog editing issue.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3561">Issue #3561</a> - Ensure sort/filter dialog should display proper message after losing database connection.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3578">Issue #3578</a> - Ensure sql for Role should be visible in SQL panel for GPDB.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3579">Issue #3579</a> - When building the Windows installer, copy system Python packages before installing dependencies to ensure we don’t end up with older versions than intended.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3604">Issue #3604</a> - Correct the documentation of View/Edit data.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_3_3.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

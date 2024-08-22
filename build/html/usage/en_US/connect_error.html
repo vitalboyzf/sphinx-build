@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Connection Error &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="connection-error">
+<span id="connect-error"></span><h1><span class="target" id="index-0"></span>Connection Error<a class="headerlink" href="#connection-error" title="Link to this heading">¶</a></h1>
+<p>When connecting to a PostgreSQL server, you may get an error message. If you
+encounter an error message, please review the message  carefully; each error
+message attempts to incorporate the information you’ll need to resolve the
+problem.  For more details about specific errors, please locate the error
+message in the list below:</p>
+<p><strong>Connection to the server has been lost</strong></p>
+<img alt="Connection to the server has been lost" class="align-center" src="../../_images/ce_timeout.png" />
+<p>This error message indicates that the connection attempt has taken longer than
+the specified threshold; there may be a problem with the connection properties
+provided on the <em>Server</em> dialog, network connectivity issues, or the server may
+not be running.</p>
+<p><strong>could not connect to Server: Connection refused</strong></p>
+<img alt="Could not connect to server" class="align-center" src="../../_images/ce_not_running.png" />
+<dl class="simple">
+<dt>If pgAdmin displays this message, there are two possible reasons for this:</dt><dd><ul class="simple">
+<li><p>the database server isn’t running - simply start it.</p></li>
+<li><p>the server isn’t configured to accept TCP/IP requests on the address shown.</p></li>
+</ul>
+</dd>
+</dl>
+<p>For security reasons, a PostgreSQL server “out of the box” doesn’t listen on
+TCP/IP ports. Instead, it must be enabled to listen for TCP/IP requests. This
+can be done by adding <strong>listen_addresses=’*’</strong>; this will make the server accept
+connections on any IP interface.</p>
+<p>For further information, please refer to the PostgreSQL documentation about
+<a class="reference external" href="https://www.postgresql.org/docs/current/runtime-config.html">runtime configuration</a>.</p>
+<p><strong>FATAL: no pg_hba.conf entry</strong></p>
+<img alt="No pg_hba.conf entry" class="align-center" src="../../_images/ce_error_hba.png" />
+<p>If pgAdmin displays this message when connecting, your server can be contacted
+correctly over the network, but is not configured to accept your connection.
+Your client has not been detected as a legal user for the database.</p>
+<p>To connect to a server, the pg_hba.conf file on the database server must be
+configured to accept connections from the host of the pgAdmin client. Modify
+the pg_hba.conf file on the database server host, and add an entry in the form:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>host template1 postgres 192.168.0.0/24 md5</strong> for an IPV4 network</p></li>
+<li><p><strong>host template1 postgres ::ffff:192.168.0.0/120 md5</strong> for an IPV6 network</p></li>
+</ul>
+</div></blockquote>
+<p>For more information, please refer to the PostgreSQL documentation about
+<a class="reference external" href="https://www.postgresql.org/docs/current/client-authentication.html">client authentication</a>.</p>
+<p><strong>FATAL: password authentication failed</strong></p>
+<img alt="Password authentication failed" class="align-center" src="../../_images/ce_password_failed.png" />
+<p>The <em>password authentication failed for user</em> error message indicates there
+may be a problem with the password you entered. Retry the password to confirm
+you entered it correctly. If the error message returns, make sure that you have
+the correct password, that you are authorized to access the server, and that
+the access has been correctly configured in the server’s postgresql.conf
+configuration file.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/connect_error.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

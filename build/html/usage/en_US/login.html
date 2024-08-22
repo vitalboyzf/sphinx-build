@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Login Dialog &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="login-dialog">
+<span id="login"></span><h1><span class="target" id="index-0"></span>Login Dialog<a class="headerlink" href="#login-dialog" title="Link to this heading">¶</a></h1>
+<p>Use the <em>Login</em> dialog to log in to pgAdmin:</p>
+<img alt="pgAdmin login dialog" class="align-center" src="../../_images/login.png" />
+<p>Use the fields in the <em>Login</em> dialog to authenticate your connection. There are
+two ways to authenticate your connection:</p>
+<ul class="simple">
+<li><p>From pgAdmin version 4.21 onwards, support for LDAP authentication
+has been added. If LDAP authentication has been enabled for your pgAdmin
+application, you can use your LDAP credentials to log in to pgAdmin:</p>
+<ul>
+<li><p>Provide the LDAP username in the <em>Email Address/Username</em> field.</p></li>
+<li><p>Provide your LDAP password in the Password field.</p></li>
+</ul>
+</li>
+<li><p>Alternatively, you can use the following information to log in to pgAdmin:</p>
+<ul>
+<li><p>Provide the email address associated with your account in the
+<em>Email Address/Username</em> field.</p></li>
+<li><p>Provide your password in the <em>Password</em> field.</p></li>
+</ul>
+</li>
+</ul>
+<p>Click the <em>Login</em> button to securely log into pgAdmin.</p>
+<p>Please note that if the pgAdmin server is restarted, then you will be logged
+out. You need to re-login to continue.</p>
+<section id="recovering-a-lost-password">
+<h2>Recovering a Lost Password<a class="headerlink" href="#recovering-a-lost-password" title="Link to this heading">¶</a></h2>
+<p>If you cannot supply your password, click the <em>Forgotten your password?</em> button
+to launch a password recovery utility.</p>
+<img alt="pgAdmin recover login password" class="align-center" src="../../_images/login_recover.png" />
+<ul class="simple">
+<li><p>Provide the email address associated with your account in the <em>Email Address</em>
+field.</p></li>
+<li><p>Click the <em>Recover Password</em> button to initiate recovery. An email, with
+directions on how to reset a password, will be sent to the address entered in
+the <em>Email Address</em> field.</p></li>
+</ul>
+<p>If you have forgotten the email associated with your account, please contact
+your administrator.</p>
+<p>Please note that your LDAP password cannot be recovered using this dialog. If
+you enter your LDAP username in the <em>Email Address/Username</em> field, and then
+enter your email to recover your password, an error message will be displayed
+asking you to contact the LDAP administrator to recover your LDAP password.</p>
+</section>
+<section id="avoiding-a-bruteforce-attack">
+<h2>Avoiding a bruteforce attack<a class="headerlink" href="#avoiding-a-bruteforce-attack" title="Link to this heading">¶</a></h2>
+<p>You have the possibility to lock an account by setting <code class="docutils literal notranslate"><span class="pre">MAX_LOGIN_ATTEMPTS</span></code>
+once it has reached the maximum number of login attempts.
+You can disable this feature by setting the value to zero.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/login.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

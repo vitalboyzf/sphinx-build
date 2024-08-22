@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.3 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-3">
+<h1>Version 4.3<a class="headerlink" href="#version-4-3" title="Link to this heading">¶</a></h1>
+<p>Release date: 2019-03-07</p>
+<p>This release contains a number of new features and fixes reported since the
+release of pgAdmin4 4.2</p>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1825">Issue #1825</a> - Install a script to start pgAdmin (pgadmin4) from the command line when installed from the Python wheel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2233">Issue #2233</a> - Add a “scratch pad” to the Query Tool to hold text snippets whilst editing.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2418">Issue #2418</a> - Add Commit and Rollback buttons to the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3439">Issue #3439</a> - Allow X-FRAME-OPTIONS to be set for security. Default to SAMEORIGIN.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3559">Issue #3559</a> - Automatically expand child nodes as well as the selected node on the treeview if there is only one.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3886">Issue #3886</a> - Include multiple versions of the PG utilties in containers.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3991">Issue #3991</a> - Update Alpine Linux version in the docker container.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4034">Issue #4034</a> - Support double-click on Query Tool result grid column resize handles to auto-size to the content.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3096">Bug #3096</a> - Ensure size stats are prettified on the statistics tab when the UI language is not English.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3352">Bug #3352</a> - Handle display of roles with expiration set to infinity correctly.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3418">Bug #3418</a> - Allow editing of values in columns with the oid datatype which are not an actual row OID.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3544">Bug #3544</a> - Make the Query Tool tab titles more concise and useful.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3587">Bug #3587</a> - Fix support for bigint’s in JSONB data.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3583">Bug #3583</a> - Update CodeMirror to 5.43.0 to resolve issues with auto-indent.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3600">Bug #3600</a> - Ensure JSON data isn’t modified in-flight by psycopg2 when using View/Edit data.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3673">Bug #3673</a> - Modify the Download as CSV option to use the same connection as the Query Tool its running in so temporary tables etc. can be used.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3873">Bug #3873</a> - Fix context sub-menu alignment on Safari.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3890">Bug #3890</a> - Update documentation screenshots as per new design.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3906">Bug #3906</a> - Fix alignment of Close and Maximize button of Grant Wizard.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3911">Bug #3911</a> - Add full support and testsfor all PG server side encodings.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3912">Bug #3912</a> - Fix editing of table data with a JSON primary key.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3933">Bug #3933</a> - Ignore exceptions in the logger.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3942">Bug #3942</a> - Close connections gracefully when the user logs out of pgAdmin.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3946">Bug #3946</a> - Fix alignment of checkbox to drop multiple schedules of pgAgent job.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3958">Bug #3958</a> - Don’t exclude SELECT statements from transaction management in the Query Tool in case they call data-modifying functions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3959">Bug #3959</a> - Optimise display of Dependencies and Dependents, and use on-demand loading of rows in batches of 100.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3963">Bug #3963</a> - Fix alignment of import/export toggle switch.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3970">Bug #3970</a> - Prevent an error when closing the Sort/Filter dialogue with an empty filter string.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3974">Bug #3974</a> - Fix alignment of Connection type toggle switch of pgagent.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3981">Bug #3981</a> - Fix the query to set bytea_output so that read-only standbys don’t consider it a write query.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3982">Bug #3982</a> - Add full support and testsfor all PG server side encodings.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3985">Bug #3985</a> - Don’t embed docs and external sites in iframes, to allow the external sites to set X-FRAME-OPTIONS = DENY for security.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3992">Bug #3992</a> - Add full support and testsfor all PG server side encodings.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3998">Bug #3998</a> - Custom-encode forward slashes in URL parameters as Apache HTTPD doesn’t allow them in some cases.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4000">Bug #4000</a> - Update CodeMirror to 5.43.0 to resolve issues with tab indent with use spaces enabled.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4013">Bug #4013</a> - Ensure long queries don’t cause errors when downloading CSV in the Query Tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4021">Bug #4021</a> - Disable the editor and execute functions whilst queries are executing.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4022">Bug #4022</a> - Fix an issue where importing servers fails if a group already exists for a different user.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_3.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

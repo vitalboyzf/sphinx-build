@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.11 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-11">
+<h1>Version 4.11<a class="headerlink" href="#version-4-11" title="Link to this heading">¶</a></h1>
+<p>Release date: 2019-07-25</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.10.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1760">Issue #1760</a> -  Add support for editing of resultsets in the Query Tool, if the data can be identified as updatable.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4318">Issue #4318</a> -  Set the mouse cursor appropriately based on the layout lock state.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4335">Issue #4335</a> -  Add EXPLAIN options for SETTINGS and SUMMARY.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4415">Issue #4415</a> -  Add Reverse Engineered SQL tests for Roles and Resource Groups.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4441">Issue #4441</a> -  Add Reverse Engineered SQL tests for FDWs.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4452">Issue #4452</a> -  Add Reverse Engineered SQL tests for Languages.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4453">Issue #4453</a> -  Add Reverse Engineered SQL tests for Extensions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4454">Issue #4454</a> -  Add Reverse Engineered SQL tests for FTS Configurations.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4456">Issue #4456</a> -  Add Reverse Engineered SQL tests for Packages.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4460">Issue #4460</a> -  Add Reverse Engineered SQL tests for FTS Dictionaries.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4463">Issue #4463</a> -  Add Reverse Engineered SQL tests for Domains.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4464">Issue #4464</a> -  Add Reverse Engineered SQL tests for Collations.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4468">Issue #4468</a> -  Add Reverse Engineered SQL tests for Types.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4469">Issue #4469</a> -  Add Reverse Engineered SQL tests for Sequences.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4471">Issue #4471</a> -  Add Reverse Engineered SQL tests for FTS Parsers.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4475">Issue #4475</a> -  Add Reverse Engineered SQL tests for Constraints.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3919">Issue #3919</a> -  Allow keyboard navigation of all controls on subnode grids.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3996">Issue #3996</a> -  Fix dropping of pgAgent schedules through the Job properties.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4224">Issue #4224</a> -  Prevent flickering of large tooltips on the Graphical EXPLAIN canvas.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4389">Issue #4389</a> -  Fix an error that could be seen when editing column privileges.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4393">Issue #4393</a> -  Ensure parameter values are quoted when needed when editing roles.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4395">Issue #4395</a> -  EXPLAIN options should be Query Tool instance-specific.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4427">Issue #4427</a> -  Fix an error while retrieving json data from the table.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4428">Issue #4428</a> -  Fix ‘malformed array literal’ error when updating a pgAgent job.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4429">Issue #4429</a> -  Ensure drag/drop from the treeview works as expected on Firefox.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4437">Issue #4437</a> -  Fix table icon issue when updating any existing field.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4442">Issue #4442</a> -  Ensure browser should not be started by Selenium when feature tests are excluded from a test run.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4446">Issue #4446</a> -  Use ROLE consistently when generating RE-SQL for roles, not USER.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4448">Issue #4448</a> -  Fix an error seen when updating a connection string in a pgAgent job step.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4450">Issue #4450</a> -  Fix reverse engineered sql for Foreign Data Wrapper created on EPAS server in redwood mode.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4462">Issue #4462</a> -  Fix some minor UI issues on IE11.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4470">Issue #4470</a> -  Fix sequence reverse engineered SQL generation with quoted names on PG/EPAS 10+.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4484">Issue #4484</a> -  Fix an issue where Explain and Explain Analyze are not working, it’s regression of #1760.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4485">Issue #4485</a> -  Fix an issue where Filter toolbar button is not working in view/edit data, it’s regression of keyboard navigation.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_11.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

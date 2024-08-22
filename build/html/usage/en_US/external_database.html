@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>External database for pgAdmin user settings &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="external-database-for-pgadmin-user-settings">
+<span id="external-database"></span><h1><span class="target" id="index-0"></span>External database for pgAdmin user settings<a class="headerlink" href="#external-database-for-pgadmin-user-settings" title="Link to this heading">¶</a></h1>
+<p>The user settings used by pgAdmin are stored in a SQLite database. In this
+database, many settings are stored, such as preferences, user accounts,
+auto-discovered servers, and many more.</p>
+<p>As SQLite is a file-based database and it can be anywhere in the file system,
+so it is not designed to take care of failures (no HA support). Furthermore,
+it isn’t designed to handle multiple connections concurrently reading/writing
+data to it. Example: In environments such as Kubernetes it may be useful to
+use an alternate backend to avoid using SQLite on non-ephemeral storage and to
+allow HA of the settings database.</p>
+<p>In order to prevent this, pgAdmin now supports storing user settings in an
+external database using the new ‘CONFIG_DATABASE_URI’ parameter in the
+<span class="xref std std-ref">config.py</span> file.</p>
+<section id="use-sqlite-database">
+<h2>Use SQLite Database<a class="headerlink" href="#use-sqlite-database" title="Link to this heading">¶</a></h2>
+<p>In order to use SQLite Database, make sure CONFIG_DATABASE_URI parameter is
+set to an empty string like ‘’. By default it is set to an empty string in the
+config.py so if you would like to use SQLite database then no need to change
+anything.</p>
+</section>
+<section id="use-external-database">
+<h2>Use External Database<a class="headerlink" href="#use-external-database" title="Link to this heading">¶</a></h2>
+<p>In order to use an external database, make sure CONFIG_DATABASE_URI parameter
+is set like “dialect+driver://username:password&#64;host:port/database”.</p>
+<p><strong>Note</strong> It is recommended to create the database in advance.</p>
+</section>
+<section id="use-postgresql-database">
+<h2>Use PostgreSQL Database<a class="headerlink" href="#use-postgresql-database" title="Link to this heading">¶</a></h2>
+<p>Following are the formats to use PostgreSQL as an external database.</p>
+<p>Basic syntax:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>postgresql://username:password@host:port/database
+</pre></div>
+</div>
+<p>Using specific schema (It is recommended to create the schema in advance):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>postgresql://username:password@host:port/database?options<span class="o">=</span>-csearch_path<span class="o">=</span>&lt;schema<span class="w"> </span>name&gt;
+</pre></div>
+</div>
+<p>Using default pgpass path for the service account:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>postgresql://username@host:port?options<span class="o">=</span>-csearch_path<span class="o">=</span>&lt;schema<span class="w"> </span>name&gt;
+</pre></div>
+</div>
+<p>Specifying pgpass file path:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>postgresql://username@host:port?passfile<span class="o">=</span>&lt;path<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>pgpass<span class="w"> </span>file&gt;<span class="p">&amp;</span><span class="nv">options</span><span class="o">=</span>-csearch_path<span class="o">=</span>&lt;schema<span class="w"> </span>name&gt;
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/external_database.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

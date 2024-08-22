@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.23 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-23">
+<h1>Version 4.23<a class="headerlink" href="#version-4-23" title="Link to this heading">¶</a></h1>
+<p>Release date: 2020-06-25</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.22.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5468">Issue #5468</a> -  Added option to ignore the whitespaces while comparing objects in schema diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5500">Issue #5500</a> -  Added server group name while selecting servers in schema diff.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5516">Issue #5516</a> -  Added support of Row Security Policies.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5576">Issue #5576</a> -  Improve error messaging if the storage and log directories cannot be created.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5325">Issue #5325</a> -  Improve code coverage and API test cases for Collations.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5574">Issue #5574</a> -  Cleanup Windows build scripts and ensure Windows x64 builds will work.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5581">Issue #5581</a> -  Documentation of Row Level Security Policies.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3591">Issue #3591</a> -  Ensure that the query tool should display the proper error message while terminating the active session.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3669">Issue #3669</a> -  Ensure that proper error should be displayed for the deleted node.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3787">Issue #3787</a> -  Disabled the Stop process button after clicking it and added a message ‘Terminating the process…’ to notify the user.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4226">Issue #4226</a> -  Fixed an issue where select all checkbox only selects the first 50 tables.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5416">Issue #5416</a> -  Ensure that the query tool panel gets closed when clicking on the ‘Don’t Save’ button.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5465">Issue #5465</a> -  Fixed an issue where the Edge browser version is showing wrong and warning message gets displayed.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5492">Issue #5492</a> -  Fixed an issue where the search object is unable to locate inherited tables and constraint filters are not working.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5507">Issue #5507</a> -  Fixed connection and version number detection issue when the database server is upgraded.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5521">Issue #5521</a> -  Fixed an issue when dumping servers from a desktop pgAdmin app by providing an option ‘–sqlite-path’.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5539">Issue #5539</a> -  Fixed typo in exception keyword.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5584">Issue #5584</a> -  Fixed an issue where two identical tables showing different by schema diff tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5592">Issue #5592</a> -  Ensure that pgadmin should be able to connect to the server which has password more than 1000 characters.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_23.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Version 4.27 &#8212; test-sphinx 0.0.1 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../_static/documentation_options.js?v=5a0213dc"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="version-4-27">
+<h1>Version 4.27<a class="headerlink" href="#version-4-27" title="Link to this heading">¶</a></h1>
+<p>Release date: 2020-10-15</p>
+<p>This release contains a number of bug fixes and new features since the release of pgAdmin4 4.26.</p>
+<section id="new-features">
+<h2>New features<a class="headerlink" href="#new-features" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/1402">Issue #1402</a> -  Added Macro support.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/2519">Issue #2519</a> -  Added support to view trigger function under the respective trigger node.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/3794">Issue #3794</a> -  Allow user to change the database connection from an open query tool tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5200">Issue #5200</a> -  Added support to ignore the owner while comparing objects in the Schema Diff tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5857">Issue #5857</a> -  Added documentation for Macro support.</div>
+</div>
+</section>
+<section id="housekeeping">
+<h2>Housekeeping<a class="headerlink" href="#housekeeping" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5330">Issue #5330</a> -  Improve code coverage and API test cases for Functions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5395">Issue #5395</a> -  Added RESQL/MSQL test cases for Functions.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5497">Issue #5497</a> -  Merged the latest code of ‘pgcli’ used for the autocomplete feature.</div>
+</div>
+</section>
+<section id="bug-fixes">
+<h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4806">Issue #4806</a> -  Added useful message when the explain plan is not used and empty.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/4855">Issue #4855</a> -  Fixed an issue where file extension is stripped on renaming a file.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5131">Issue #5131</a> -  Ensure that ‘ctrl + a’ shortcut does not move the cursor in SQL editor.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5417">Issue #5417</a> -  Fixed and improve API test cases for the schema diff tool.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5739">Issue #5739</a> -  Ensure that the import/export feature should work with SSH Tunnel.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5802">Issue #5802</a> -  Remove maximum length on the password field in the server dialog.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5807">Issue #5807</a> -  Fixed an issue where a column is renamed and then removed, then the drop SQL query takes the wrong column name.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5826">Issue #5826</a> -  Fixed an issue where schema diff is showing identical table as different due to default vacuum settings.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5830">Issue #5830</a> -  Fixed reverse engineering SQL where parenthesis is not properly arranged for View/MView definition.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5835">Issue #5835</a> -  Fixed ‘can’t execute an empty query’ message if the user change the option of Auto FK Index.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5839">Issue #5839</a> -  Ensure that multiple extensions can be dropped from the properties tab.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5841">Issue #5841</a> -  Fixed an issue where the server is not able to connect using the service.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5843">Issue #5843</a> -  Fixed an issue where the ‘PARALLEL UNSAFE’ option is missing from reverse engineering SQL of function/procedure.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5845">Issue #5845</a> -  Fixed an issue where the query tool is not fetching more than 1000 rows for the table does not have any primary key.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5853">Issue #5853</a> -  Fixed an issue where ‘Rows X’ column values were not visible properly for Explain Analyze in Dark theme.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5855">Issue #5855</a> -  Ensure that the user should be able to change the start value of the existing sequence.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5861">Issue #5861</a> -  Ensure that the ‘Remove Server’ option should be visible in the context menu.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5867">Issue #5867</a> -  Fixed an issue where some properties are not being updated correctly for the shared server.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5882">Issue #5882</a> -  Fixed invalid literal issue when fetching dependencies for Materialized View.</div>
+<div class="line"><a class="reference external" href="https://redmine.postgresql.org/issues/5885">Issue #5885</a> -  Fixed an issue where the user is unable to change the macro name.</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">test-sphinx</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, vital.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../../_sources/usage/en_US/release_notes_4_27.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
